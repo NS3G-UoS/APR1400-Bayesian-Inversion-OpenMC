@@ -1,0 +1,7 @@
+{
+  "alpha_Gd_true": 1.073,
+  "created_at": "2026-11-16T07:34:40.941687+00:00",
+  "note": "Do not expose in public dataset",
+  "public_dataset_mode": "blind_response_only",
+  "n_private_alpha_rows": 65
+}

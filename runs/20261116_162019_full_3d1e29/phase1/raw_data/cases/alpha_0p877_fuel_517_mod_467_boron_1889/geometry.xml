@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1185" material="981" region="-815" universe="445"/>
+  <cell id="1186" material="987" region="815 -816" universe="445"/>
+  <cell id="1187" material="986" region="816 -817" universe="445"/>
+  <cell id="1188" material="987" region="817" universe="445"/>
+  <cell id="1189" material="982" region="-815" universe="446"/>
+  <cell id="1190" material="987" region="815 -816" universe="446"/>
+  <cell id="1191" material="986" region="816 -817" universe="446"/>
+  <cell id="1192" material="987" region="817" universe="446"/>
+  <cell id="1193" material="985" region="-815" universe="447"/>
+  <cell id="1194" material="987" region="815 -816" universe="447"/>
+  <cell id="1195" material="986" region="816 -817" universe="447"/>
+  <cell id="1196" material="987" region="817" universe="447"/>
+  <cell id="1197" material="987" region="-818" universe="448"/>
+  <cell id="1198" material="986" region="818 -819" universe="448"/>
+  <cell id="1199" material="987" region="819" universe="448"/>
+  <cell id="1200" fill="449" region="822 -823 824 -825 820 -821" universe="450"/>
+  <lattice id="449" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+446 446 445 445 445 445 445 445 445 445 445 445 445 445 446 446 
+446 445 445 447 445 445 445 445 445 445 445 445 447 445 445 446 
+445 445 445 446 446 445 445 445 445 445 445 446 446 445 445 445 
+445 447 446 448 448 446 445 445 445 445 446 448 448 446 447 445 
+445 445 446 448 448 446 447 445 445 447 446 448 448 446 445 445 
+445 445 445 446 446 445 445 445 445 445 445 446 446 445 445 445 
+445 445 445 445 447 445 445 446 446 445 445 447 445 445 445 445 
+445 445 445 445 445 445 446 448 448 446 445 445 445 445 445 445 
+445 445 445 445 445 445 446 448 448 446 445 445 445 445 445 445 
+445 445 445 445 447 445 445 446 446 445 445 447 445 445 445 445 
+445 445 445 446 446 445 445 445 445 445 445 446 446 445 445 445 
+445 445 446 448 448 446 447 445 445 447 446 448 448 446 445 445 
+445 447 446 448 448 446 445 445 445 445 446 448 448 446 447 445 
+445 445 445 446 446 445 445 445 445 445 445 446 446 445 445 445 
+446 445 445 447 445 445 445 445 445 445 445 445 447 445 445 446 
+446 446 445 445 445 445 445 445 445 445 445 445 445 445 446 446 </universes>
+  </lattice>
+  <surface id="815" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="816" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="817" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="818" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="819" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="820" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="821" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="822" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="823" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="824" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="825" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

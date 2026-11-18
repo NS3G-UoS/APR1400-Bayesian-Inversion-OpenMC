@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1233" material="1002" region="-848" universe="463"/>
+  <cell id="1234" material="1008" region="848 -849" universe="463"/>
+  <cell id="1235" material="1007" region="849 -850" universe="463"/>
+  <cell id="1236" material="1008" region="850" universe="463"/>
+  <cell id="1237" material="1003" region="-848" universe="464"/>
+  <cell id="1238" material="1008" region="848 -849" universe="464"/>
+  <cell id="1239" material="1007" region="849 -850" universe="464"/>
+  <cell id="1240" material="1008" region="850" universe="464"/>
+  <cell id="1241" material="1006" region="-848" universe="465"/>
+  <cell id="1242" material="1008" region="848 -849" universe="465"/>
+  <cell id="1243" material="1007" region="849 -850" universe="465"/>
+  <cell id="1244" material="1008" region="850" universe="465"/>
+  <cell id="1245" material="1008" region="-851" universe="466"/>
+  <cell id="1246" material="1007" region="851 -852" universe="466"/>
+  <cell id="1247" material="1008" region="852" universe="466"/>
+  <cell id="1248" fill="467" region="855 -856 857 -858 853 -854" universe="468"/>
+  <lattice id="467" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+464 464 463 463 463 463 463 463 463 463 463 463 463 463 464 464 
+464 463 463 465 463 463 463 463 463 463 463 463 465 463 463 464 
+463 463 463 464 464 463 463 463 463 463 463 464 464 463 463 463 
+463 465 464 466 466 464 463 463 463 463 464 466 466 464 465 463 
+463 463 464 466 466 464 465 463 463 465 464 466 466 464 463 463 
+463 463 463 464 464 463 463 463 463 463 463 464 464 463 463 463 
+463 463 463 463 465 463 463 464 464 463 463 465 463 463 463 463 
+463 463 463 463 463 463 464 466 466 464 463 463 463 463 463 463 
+463 463 463 463 463 463 464 466 466 464 463 463 463 463 463 463 
+463 463 463 463 465 463 463 464 464 463 463 465 463 463 463 463 
+463 463 463 464 464 463 463 463 463 463 463 464 464 463 463 463 
+463 463 464 466 466 464 465 463 463 465 464 466 466 464 463 463 
+463 465 464 466 466 464 463 463 463 463 464 466 466 464 465 463 
+463 463 463 464 464 463 463 463 463 463 463 464 464 463 463 463 
+464 463 463 465 463 463 463 463 463 463 463 463 465 463 463 464 
+464 464 463 463 463 463 463 463 463 463 463 463 463 463 464 464 </universes>
+  </lattice>
+  <surface id="848" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="849" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="850" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="851" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="852" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="853" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="854" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="855" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="856" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="857" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="858" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

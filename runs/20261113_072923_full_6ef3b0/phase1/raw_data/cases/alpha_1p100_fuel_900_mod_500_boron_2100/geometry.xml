@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1089" material="939" region="-749" universe="409"/>
+  <cell id="1090" material="945" region="749 -750" universe="409"/>
+  <cell id="1091" material="944" region="750 -751" universe="409"/>
+  <cell id="1092" material="945" region="751" universe="409"/>
+  <cell id="1093" material="940" region="-749" universe="410"/>
+  <cell id="1094" material="945" region="749 -750" universe="410"/>
+  <cell id="1095" material="944" region="750 -751" universe="410"/>
+  <cell id="1096" material="945" region="751" universe="410"/>
+  <cell id="1097" material="943" region="-749" universe="411"/>
+  <cell id="1098" material="945" region="749 -750" universe="411"/>
+  <cell id="1099" material="944" region="750 -751" universe="411"/>
+  <cell id="1100" material="945" region="751" universe="411"/>
+  <cell id="1101" material="945" region="-752" universe="412"/>
+  <cell id="1102" material="944" region="752 -753" universe="412"/>
+  <cell id="1103" material="945" region="753" universe="412"/>
+  <cell id="1104" fill="413" region="756 -757 758 -759 754 -755" universe="414"/>
+  <lattice id="413" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+410 410 409 409 409 409 409 409 409 409 409 409 409 409 410 410 
+410 409 409 411 409 409 409 409 409 409 409 409 411 409 409 410 
+409 409 409 410 410 409 409 409 409 409 409 410 410 409 409 409 
+409 411 410 412 412 410 409 409 409 409 410 412 412 410 411 409 
+409 409 410 412 412 410 411 409 409 411 410 412 412 410 409 409 
+409 409 409 410 410 409 409 409 409 409 409 410 410 409 409 409 
+409 409 409 409 411 409 409 410 410 409 409 411 409 409 409 409 
+409 409 409 409 409 409 410 412 412 410 409 409 409 409 409 409 
+409 409 409 409 409 409 410 412 412 410 409 409 409 409 409 409 
+409 409 409 409 411 409 409 410 410 409 409 411 409 409 409 409 
+409 409 409 410 410 409 409 409 409 409 409 410 410 409 409 409 
+409 409 410 412 412 410 411 409 409 411 410 412 412 410 409 409 
+409 411 410 412 412 410 409 409 409 409 410 412 412 410 411 409 
+409 409 409 410 410 409 409 409 409 409 409 410 410 409 409 409 
+410 409 409 411 409 409 409 409 409 409 409 409 411 409 409 410 
+410 410 409 409 409 409 409 409 409 409 409 409 409 409 410 410 </universes>
+  </lattice>
+  <surface id="749" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="750" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="751" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="752" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="753" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="754" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="755" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="756" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="757" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="758" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="759" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

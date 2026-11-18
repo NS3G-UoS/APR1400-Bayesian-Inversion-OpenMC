@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1057" material="925" region="-727" universe="397"/>
+  <cell id="1058" material="931" region="727 -728" universe="397"/>
+  <cell id="1059" material="930" region="728 -729" universe="397"/>
+  <cell id="1060" material="931" region="729" universe="397"/>
+  <cell id="1061" material="926" region="-727" universe="398"/>
+  <cell id="1062" material="931" region="727 -728" universe="398"/>
+  <cell id="1063" material="930" region="728 -729" universe="398"/>
+  <cell id="1064" material="931" region="729" universe="398"/>
+  <cell id="1065" material="929" region="-727" universe="399"/>
+  <cell id="1066" material="931" region="727 -728" universe="399"/>
+  <cell id="1067" material="930" region="728 -729" universe="399"/>
+  <cell id="1068" material="931" region="729" universe="399"/>
+  <cell id="1069" material="931" region="-730" universe="400"/>
+  <cell id="1070" material="930" region="730 -731" universe="400"/>
+  <cell id="1071" material="931" region="731" universe="400"/>
+  <cell id="1072" fill="401" region="734 -735 736 -737 732 -733" universe="402"/>
+  <lattice id="401" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+398 398 397 397 397 397 397 397 397 397 397 397 397 397 398 398 
+398 397 397 399 397 397 397 397 397 397 397 397 399 397 397 398 
+397 397 397 398 398 397 397 397 397 397 397 398 398 397 397 397 
+397 399 398 400 400 398 397 397 397 397 398 400 400 398 399 397 
+397 397 398 400 400 398 399 397 397 399 398 400 400 398 397 397 
+397 397 397 398 398 397 397 397 397 397 397 398 398 397 397 397 
+397 397 397 397 399 397 397 398 398 397 397 399 397 397 397 397 
+397 397 397 397 397 397 398 400 400 398 397 397 397 397 397 397 
+397 397 397 397 397 397 398 400 400 398 397 397 397 397 397 397 
+397 397 397 397 399 397 397 398 398 397 397 399 397 397 397 397 
+397 397 397 398 398 397 397 397 397 397 397 398 398 397 397 397 
+397 397 398 400 400 398 399 397 397 399 398 400 400 398 397 397 
+397 399 398 400 400 398 397 397 397 397 398 400 400 398 399 397 
+397 397 397 398 398 397 397 397 397 397 397 398 398 397 397 397 
+398 397 397 399 397 397 397 397 397 397 397 397 399 397 397 398 
+398 398 397 397 397 397 397 397 397 397 397 397 397 397 398 398 </universes>
+  </lattice>
+  <surface id="727" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="728" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="729" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="730" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="731" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="732" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="733" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="734" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="735" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="736" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="737" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

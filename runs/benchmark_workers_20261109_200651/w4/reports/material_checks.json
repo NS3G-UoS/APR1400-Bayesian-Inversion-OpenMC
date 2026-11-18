@@ -1,0 +1,68 @@
+{
+  "library": {
+    "H": "neutron data at 900 K present",
+    "L": "neutron data at 900 K present",
+    "G": "neutron data at 900 K present",
+    "clad": "neutron data at 600 K present",
+    "water": "neutron data at 600 K present",
+    "thermal": "c_H_in_H2O at 600 K present"
+  },
+  "cases": [
+    {
+      "alpha_gd": 0.25,
+      "case_number": 1,
+      "seed": 12346,
+      "H_density_g_cm3": 10.301,
+      "H_O_per_metal": 2.0,
+      "L_density_g_cm3": 10.301,
+      "L_O_per_metal": 2.0,
+      "G_density_g_cm3": 10.301,
+      "G_O_per_metal": 1.9852486107853051,
+      "G_gd2o3_wt_fraction": 0.020000663624941423,
+      "G_gd2o3_wt_expected": 0.02,
+      "G_density_expected": 10.301
+    },
+    {
+      "alpha_gd": 0.5833333333333333,
+      "case_number": 2,
+      "seed": 12347,
+      "H_density_g_cm3": 10.301,
+      "H_O_per_metal": 2.0,
+      "L_density_g_cm3": 10.301,
+      "L_O_per_metal": 2.0,
+      "G_density_g_cm3": 10.301,
+      "G_O_per_metal": 1.966019424995873,
+      "G_gd2o3_wt_fraction": 0.04666821512486332,
+      "G_gd2o3_wt_expected": 0.04666666666666666,
+      "G_density_expected": 10.301
+    },
+    {
+      "alpha_gd": 0.9166666666666666,
+      "case_number": 3,
+      "seed": 12348,
+      "H_density_g_cm3": 10.301,
+      "H_O_per_metal": 2.0,
+      "L_density_g_cm3": 10.301,
+      "L_O_per_metal": 2.0,
+      "G_density_g_cm3": 10.301,
+      "G_O_per_metal": 1.947274932429911,
+      "G_gd2o3_wt_fraction": 0.07333576662478522,
+      "G_gd2o3_wt_expected": 0.07333333333333333,
+      "G_density_expected": 10.301
+    },
+    {
+      "alpha_gd": 1.25,
+      "case_number": 4,
+      "seed": 12349,
+      "H_density_g_cm3": 10.301,
+      "H_O_per_metal": 2.0,
+      "L_density_g_cm3": 10.301,
+      "L_O_per_metal": 2.0,
+      "G_density_g_cm3": 10.301,
+      "G_O_per_metal": 1.9289970353191486,
+      "G_gd2o3_wt_fraction": 0.10000331812470714,
+      "G_gd2o3_wt_expected": 0.1,
+      "G_density_expected": 10.301
+    }
+  ]
+}

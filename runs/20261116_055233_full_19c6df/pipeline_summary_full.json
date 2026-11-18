@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-11-16T07:42:16.680513+00:00",
+  "status": "completed",
+  "mode": "full",
+  "run_dir": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df",
+  "phase1": {
+    "output_dir": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase1",
+    "dataset_csv": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase1/processed_data/openmc_dataset.csv",
+    "lookup_json": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase1/private_truth/blind_alpha_lookup.json",
+    "n_rows": 65,
+    "n_success": 65,
+    "alpha_min": 0.26879599783569574,
+    "alpha_max": 1.2297984743490815
+  },
+  "phase2": {
+    "output_dir": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase2/results",
+    "plots_dir": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase2/plots",
+    "summary_json": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_055233_full_19c6df/phase2/results/phase2_summary_full.json"
+  }
+}

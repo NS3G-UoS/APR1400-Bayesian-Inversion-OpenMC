@@ -1,0 +1,20 @@
+ =====================>     TALLY 352: FLUX_TALLY     <=====================
+
+ Total Material
+   Flux                                 37.7365 +/- 0.0319527
+ ==================>     TALLY 353: GD_FISSION_TALLY     <==================
+
+ Material 1286
+   Total Material
+     Fission Rate                         0.00495698 +/- 1.939e-05
+ ================>     TALLY 354: TOTAL_FISSION_TALLY     <=================
+
+ Material 1282
+   Total Material
+     Fission Rate                         0.317222 +/- 0.000858434
+ Material 1283
+   Total Material
+     Fission Rate                         0.098326 +/- 0.000499251
+ Material 1286
+   Total Material
+     Fission Rate                         0.00495698 +/- 1.939e-05

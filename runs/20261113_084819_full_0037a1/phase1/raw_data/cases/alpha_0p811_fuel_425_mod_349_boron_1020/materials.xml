@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material id="918" name="fuel_H" depletable="true" temperature="424.84499840810895">
+    <density value="10.301" units="g/cm3"/>
+    <nuclide name="U234" ao="0.00032935476210584324"/>
+    <nuclide name="U235" ao="0.03684824064580932"/>
+    <nuclide name="U238" ao="0.9626536219511274"/>
+    <nuclide name="U236" ao="0.00016878264095746356"/>
+    <nuclide name="O16" ao="1.999242"/>
+    <nuclide name="O17" ao="0.000758"/>
+  </material>
+  <material id="919" name="fuel_L" depletable="true" temperature="424.84499840810895">
+    <density value="10.301" units="g/cm3"/>
+    <nuclide name="U234" ao="0.000284132160946944"/>
+    <nuclide name="U235" ao="0.03178873192798165"/>
+    <nuclide name="U238" ao="0.9677815282502046"/>
+    <nuclide name="U236" ao="0.0001456076608668094"/>
+    <nuclide name="O16" ao="1.999242"/>
+    <nuclide name="O17" ao="0.000758"/>
+  </material>
+  <material id="922" name="fuel_G" depletable="true" temperature="424.84499840810895">
+    <density value="10.301" units="g/cm3"/>
+    <nuclide name="U234" ao="5.554979059670572e-05"/>
+    <nuclide name="U235" ao="0.0062149156084584595"/>
+    <nuclide name="U238" ao="0.3006014435596078"/>
+    <nuclide name="U236" ao="2.8467298610162483e-05"/>
+    <nuclide name="O16" ao="0.6611294122029342"/>
+    <nuclide name="O17" ao="0.0002506630485203013"/>
+    <nuclide name="Gd152" ao="6.343909698254457e-05"/>
+    <nuclide name="Gd154" ao="0.0006914861571097358"/>
+    <nuclide name="Gd155" ao="0.0046944931767082965"/>
+    <nuclide name="Gd156" ao="0.006492991576163435"/>
+    <nuclide name="Gd157" ao="0.004964109338884111"/>
+    <nuclide name="Gd158" ao="0.007879135845232034"/>
+    <nuclide name="Gd160" ao="0.0069338933001921186"/>
+  </material>
+  <material id="923" name="clad" temperature="600.0">
+    <density value="6.55" units="g/cm3"/>
+    <nuclide name="Zr90" ao="0.5145"/>
+    <nuclide name="Zr91" ao="0.1122"/>
+    <nuclide name="Zr92" ao="0.1715"/>
+    <nuclide name="Zr94" ao="0.1738"/>
+    <nuclide name="Zr96" ao="0.028"/>
+  </material>
+  <material id="924" name="water_borated" temperature="348.7279406301677">
+    <density value="0.9822232477538732" units="g/cc"/>
+    <nuclide name="H1" ao="0.11091107587946607"/>
+    <nuclide name="H2" ao="1.7275981518829788e-05"/>
+    <nuclide name="O16" ao="0.055443155007814784"/>
+    <nuclide name="O17" ao="2.1020922677656635e-05"/>
+    <nuclide name="B10" ao="1.870534206388709e-05"/>
+    <nuclide name="B11" ao="7.567075311213254e-05"/>
+    <sab name="c_H_in_H2O"/>
+  </material>
+</materials>

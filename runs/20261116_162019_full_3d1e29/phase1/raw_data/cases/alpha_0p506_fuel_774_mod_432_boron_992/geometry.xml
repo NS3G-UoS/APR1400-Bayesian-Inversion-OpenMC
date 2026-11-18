@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1169" material="974" region="-804" universe="439"/>
+  <cell id="1170" material="980" region="804 -805" universe="439"/>
+  <cell id="1171" material="979" region="805 -806" universe="439"/>
+  <cell id="1172" material="980" region="806" universe="439"/>
+  <cell id="1173" material="975" region="-804" universe="440"/>
+  <cell id="1174" material="980" region="804 -805" universe="440"/>
+  <cell id="1175" material="979" region="805 -806" universe="440"/>
+  <cell id="1176" material="980" region="806" universe="440"/>
+  <cell id="1177" material="978" region="-804" universe="441"/>
+  <cell id="1178" material="980" region="804 -805" universe="441"/>
+  <cell id="1179" material="979" region="805 -806" universe="441"/>
+  <cell id="1180" material="980" region="806" universe="441"/>
+  <cell id="1181" material="980" region="-807" universe="442"/>
+  <cell id="1182" material="979" region="807 -808" universe="442"/>
+  <cell id="1183" material="980" region="808" universe="442"/>
+  <cell id="1184" fill="443" region="811 -812 813 -814 809 -810" universe="444"/>
+  <lattice id="443" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+440 440 439 439 439 439 439 439 439 439 439 439 439 439 440 440 
+440 439 439 441 439 439 439 439 439 439 439 439 441 439 439 440 
+439 439 439 440 440 439 439 439 439 439 439 440 440 439 439 439 
+439 441 440 442 442 440 439 439 439 439 440 442 442 440 441 439 
+439 439 440 442 442 440 441 439 439 441 440 442 442 440 439 439 
+439 439 439 440 440 439 439 439 439 439 439 440 440 439 439 439 
+439 439 439 439 441 439 439 440 440 439 439 441 439 439 439 439 
+439 439 439 439 439 439 440 442 442 440 439 439 439 439 439 439 
+439 439 439 439 439 439 440 442 442 440 439 439 439 439 439 439 
+439 439 439 439 441 439 439 440 440 439 439 441 439 439 439 439 
+439 439 439 440 440 439 439 439 439 439 439 440 440 439 439 439 
+439 439 440 442 442 440 441 439 439 441 440 442 442 440 439 439 
+439 441 440 442 442 440 439 439 439 439 440 442 442 440 441 439 
+439 439 439 440 440 439 439 439 439 439 439 440 440 439 439 439 
+440 439 439 441 439 439 439 439 439 439 439 439 441 439 439 440 
+440 440 439 439 439 439 439 439 439 439 439 439 439 439 440 440 </universes>
+  </lattice>
+  <surface id="804" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="805" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="806" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="807" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="808" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="809" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="810" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="811" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="812" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="813" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="814" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

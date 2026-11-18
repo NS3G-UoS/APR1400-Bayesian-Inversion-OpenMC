@@ -1,0 +1,81 @@
+{
+  "features": [
+    "alpha_gd",
+    "fuel_temp",
+    "moderator_temp",
+    "boron_ppm"
+  ],
+  "ranges": {
+    "alpha_gd": [
+      0.25,
+      1.25
+    ],
+    "fuel_temp": [
+      294.0,
+      1000.0
+    ],
+    "moderator_temp": [
+      294.0,
+      600.0
+    ],
+    "boron_ppm": [
+      0.0,
+      2200.0
+    ]
+  },
+  "design_rows": 53,
+  "replicate_rows": 5,
+  "length_scales": [
+    299.99999999999994,
+    299.99999999999994,
+    10.554005227878978,
+    299.99999999999994
+  ],
+  "feature_importance": [
+    {
+      "feature": "moderator_temp",
+      "length_scale": 10.554005227878978,
+      "inverse_length_scale": 0.09475075844746085,
+      "relative_importance": 0.9045352974220647
+    },
+    {
+      "feature": "alpha_gd",
+      "length_scale": 299.99999999999994,
+      "inverse_length_scale": 0.003333333333333334,
+      "relative_importance": 0.031821567525978464
+    },
+    {
+      "feature": "fuel_temp",
+      "length_scale": 299.99999999999994,
+      "inverse_length_scale": 0.003333333333333334,
+      "relative_importance": 0.031821567525978464
+    },
+    {
+      "feature": "boron_ppm",
+      "length_scale": 299.99999999999994,
+      "inverse_length_scale": 0.003333333333333334,
+      "relative_importance": 0.031821567525978464
+    }
+  ],
+  "kernel_summary": "0.458**2 * DotProduct(sigma_0=1e-06) + Matern(length_scale=[300, 300, 10.6, 300], nu=2.5)",
+  "gp_diagnostics": {
+    "n_restarts_optimizer": 8,
+    "convergence_warnings": [
+      "The optimal value found for dimension 0 of parameter k2__k1__sigma_0 is close to the specified lower bound 1e-06. Decreasing the bound and calling fit again may find a better value.",
+      "The optimal value found for dimension 0 of parameter k2__k2__length_scale is close to the specified upper bound 300.0. Increasing the bound and calling fit again may find a better value.",
+      "The optimal value found for dimension 1 of parameter k2__k2__length_scale is close to the specified upper bound 300.0. Increasing the bound and calling fit again may find a better value.",
+      "The optimal value found for dimension 3 of parameter k2__k2__length_scale is close to the specified upper bound 300.0. Increasing the bound and calling fit again may find a better value."
+    ],
+    "length_scale_bounds": [
+      0.01,
+      300.0
+    ],
+    "near_upper_features": [
+      "alpha_gd",
+      "fuel_temp",
+      "boron_ppm"
+    ]
+  },
+  "feasibility_constraint": "fuel_temp >= moderator_temp",
+  "library_coverage_note": "Check cross-section library availability: 294, 600, 900, and 1200 K should be confirmed before using 1000 K points; 1000 K may require interpolation between 900 and 1200 K."
+}

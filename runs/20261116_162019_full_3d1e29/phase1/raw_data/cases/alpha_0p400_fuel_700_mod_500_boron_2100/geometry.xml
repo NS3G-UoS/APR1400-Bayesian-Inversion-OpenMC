@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1745" material="1226" region="-1200" universe="655"/>
+  <cell id="1746" material="1232" region="1200 -1201" universe="655"/>
+  <cell id="1747" material="1231" region="1201 -1202" universe="655"/>
+  <cell id="1748" material="1232" region="1202" universe="655"/>
+  <cell id="1749" material="1227" region="-1200" universe="656"/>
+  <cell id="1750" material="1232" region="1200 -1201" universe="656"/>
+  <cell id="1751" material="1231" region="1201 -1202" universe="656"/>
+  <cell id="1752" material="1232" region="1202" universe="656"/>
+  <cell id="1753" material="1230" region="-1200" universe="657"/>
+  <cell id="1754" material="1232" region="1200 -1201" universe="657"/>
+  <cell id="1755" material="1231" region="1201 -1202" universe="657"/>
+  <cell id="1756" material="1232" region="1202" universe="657"/>
+  <cell id="1757" material="1232" region="-1203" universe="658"/>
+  <cell id="1758" material="1231" region="1203 -1204" universe="658"/>
+  <cell id="1759" material="1232" region="1204" universe="658"/>
+  <cell id="1760" fill="659" region="1207 -1208 1209 -1210 1205 -1206" universe="660"/>
+  <lattice id="659" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+656 656 655 655 655 655 655 655 655 655 655 655 655 655 656 656 
+656 655 655 657 655 655 655 655 655 655 655 655 657 655 655 656 
+655 655 655 656 656 655 655 655 655 655 655 656 656 655 655 655 
+655 657 656 658 658 656 655 655 655 655 656 658 658 656 657 655 
+655 655 656 658 658 656 657 655 655 657 656 658 658 656 655 655 
+655 655 655 656 656 655 655 655 655 655 655 656 656 655 655 655 
+655 655 655 655 657 655 655 656 656 655 655 657 655 655 655 655 
+655 655 655 655 655 655 656 658 658 656 655 655 655 655 655 655 
+655 655 655 655 655 655 656 658 658 656 655 655 655 655 655 655 
+655 655 655 655 657 655 655 656 656 655 655 657 655 655 655 655 
+655 655 655 656 656 655 655 655 655 655 655 656 656 655 655 655 
+655 655 656 658 658 656 657 655 655 657 656 658 658 656 655 655 
+655 657 656 658 658 656 655 655 655 655 656 658 658 656 657 655 
+655 655 655 656 656 655 655 655 655 655 655 656 656 655 655 655 
+656 655 655 657 655 655 655 655 655 655 655 655 657 655 655 656 
+656 656 655 655 655 655 655 655 655 655 655 655 655 655 656 656 </universes>
+  </lattice>
+  <surface id="1200" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="1201" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="1202" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="1203" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="1204" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="1205" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="1206" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="1207" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1208" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="1209" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1210" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

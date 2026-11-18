@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="65" material="64" region="-45" universe="25"/>
+  <cell id="66" material="70" region="45 -46" universe="25"/>
+  <cell id="67" material="69" region="46 -47" universe="25"/>
+  <cell id="68" material="70" region="47" universe="25"/>
+  <cell id="69" material="65" region="-45" universe="26"/>
+  <cell id="70" material="70" region="45 -46" universe="26"/>
+  <cell id="71" material="69" region="46 -47" universe="26"/>
+  <cell id="72" material="70" region="47" universe="26"/>
+  <cell id="73" material="68" region="-45" universe="27"/>
+  <cell id="74" material="70" region="45 -46" universe="27"/>
+  <cell id="75" material="69" region="46 -47" universe="27"/>
+  <cell id="76" material="70" region="47" universe="27"/>
+  <cell id="77" material="70" region="-48" universe="28"/>
+  <cell id="78" material="69" region="48 -49" universe="28"/>
+  <cell id="79" material="70" region="49" universe="28"/>
+  <cell id="80" fill="29" region="52 -53 54 -55 50 -51" universe="30"/>
+  <lattice id="29" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+26 26 25 25 25 25 25 25 25 25 25 25 25 25 26 26 
+26 25 25 27 25 25 25 25 25 25 25 25 27 25 25 26 
+25 25 25 26 26 25 25 25 25 25 25 26 26 25 25 25 
+25 27 26 28 28 26 25 25 25 25 26 28 28 26 27 25 
+25 25 26 28 28 26 27 25 25 27 26 28 28 26 25 25 
+25 25 25 26 26 25 25 25 25 25 25 26 26 25 25 25 
+25 25 25 25 27 25 25 26 26 25 25 27 25 25 25 25 
+25 25 25 25 25 25 26 28 28 26 25 25 25 25 25 25 
+25 25 25 25 25 25 26 28 28 26 25 25 25 25 25 25 
+25 25 25 25 27 25 25 26 26 25 25 27 25 25 25 25 
+25 25 25 26 26 25 25 25 25 25 25 26 26 25 25 25 
+25 25 26 28 28 26 27 25 25 27 26 28 28 26 25 25 
+25 27 26 28 28 26 25 25 25 25 26 28 28 26 27 25 
+25 25 25 26 26 25 25 25 25 25 25 26 26 25 25 25 
+26 25 25 27 25 25 25 25 25 25 25 25 27 25 25 26 
+26 26 25 25 25 25 25 25 25 25 25 25 25 25 26 26 </universes>
+  </lattice>
+  <surface id="45" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="46" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="47" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="48" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="49" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="50" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="51" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="52" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="53" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="54" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="55" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

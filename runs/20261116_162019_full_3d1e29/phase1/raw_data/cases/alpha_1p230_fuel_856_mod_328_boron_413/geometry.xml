@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1201" material="988" region="-826" universe="451"/>
+  <cell id="1202" material="994" region="826 -827" universe="451"/>
+  <cell id="1203" material="993" region="827 -828" universe="451"/>
+  <cell id="1204" material="994" region="828" universe="451"/>
+  <cell id="1205" material="989" region="-826" universe="452"/>
+  <cell id="1206" material="994" region="826 -827" universe="452"/>
+  <cell id="1207" material="993" region="827 -828" universe="452"/>
+  <cell id="1208" material="994" region="828" universe="452"/>
+  <cell id="1209" material="992" region="-826" universe="453"/>
+  <cell id="1210" material="994" region="826 -827" universe="453"/>
+  <cell id="1211" material="993" region="827 -828" universe="453"/>
+  <cell id="1212" material="994" region="828" universe="453"/>
+  <cell id="1213" material="994" region="-829" universe="454"/>
+  <cell id="1214" material="993" region="829 -830" universe="454"/>
+  <cell id="1215" material="994" region="830" universe="454"/>
+  <cell id="1216" fill="455" region="833 -834 835 -836 831 -832" universe="456"/>
+  <lattice id="455" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+452 452 451 451 451 451 451 451 451 451 451 451 451 451 452 452 
+452 451 451 453 451 451 451 451 451 451 451 451 453 451 451 452 
+451 451 451 452 452 451 451 451 451 451 451 452 452 451 451 451 
+451 453 452 454 454 452 451 451 451 451 452 454 454 452 453 451 
+451 451 452 454 454 452 453 451 451 453 452 454 454 452 451 451 
+451 451 451 452 452 451 451 451 451 451 451 452 452 451 451 451 
+451 451 451 451 453 451 451 452 452 451 451 453 451 451 451 451 
+451 451 451 451 451 451 452 454 454 452 451 451 451 451 451 451 
+451 451 451 451 451 451 452 454 454 452 451 451 451 451 451 451 
+451 451 451 451 453 451 451 452 452 451 451 453 451 451 451 451 
+451 451 451 452 452 451 451 451 451 451 451 452 452 451 451 451 
+451 451 452 454 454 452 453 451 451 453 452 454 454 452 451 451 
+451 453 452 454 454 452 451 451 451 451 452 454 454 452 453 451 
+451 451 451 452 452 451 451 451 451 451 451 452 452 451 451 451 
+452 451 451 453 451 451 451 451 451 451 451 451 453 451 451 452 
+452 452 451 451 451 451 451 451 451 451 451 451 451 451 452 452 </universes>
+  </lattice>
+  <surface id="826" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="827" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="828" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="829" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="830" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="831" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="832" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="833" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="834" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="835" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="836" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

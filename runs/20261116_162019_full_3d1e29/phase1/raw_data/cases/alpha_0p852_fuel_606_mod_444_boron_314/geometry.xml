@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1313" material="1037" region="-903" universe="493"/>
+  <cell id="1314" material="1043" region="903 -904" universe="493"/>
+  <cell id="1315" material="1042" region="904 -905" universe="493"/>
+  <cell id="1316" material="1043" region="905" universe="493"/>
+  <cell id="1317" material="1038" region="-903" universe="494"/>
+  <cell id="1318" material="1043" region="903 -904" universe="494"/>
+  <cell id="1319" material="1042" region="904 -905" universe="494"/>
+  <cell id="1320" material="1043" region="905" universe="494"/>
+  <cell id="1321" material="1041" region="-903" universe="495"/>
+  <cell id="1322" material="1043" region="903 -904" universe="495"/>
+  <cell id="1323" material="1042" region="904 -905" universe="495"/>
+  <cell id="1324" material="1043" region="905" universe="495"/>
+  <cell id="1325" material="1043" region="-906" universe="496"/>
+  <cell id="1326" material="1042" region="906 -907" universe="496"/>
+  <cell id="1327" material="1043" region="907" universe="496"/>
+  <cell id="1328" fill="497" region="910 -911 912 -913 908 -909" universe="498"/>
+  <lattice id="497" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+494 494 493 493 493 493 493 493 493 493 493 493 493 493 494 494 
+494 493 493 495 493 493 493 493 493 493 493 493 495 493 493 494 
+493 493 493 494 494 493 493 493 493 493 493 494 494 493 493 493 
+493 495 494 496 496 494 493 493 493 493 494 496 496 494 495 493 
+493 493 494 496 496 494 495 493 493 495 494 496 496 494 493 493 
+493 493 493 494 494 493 493 493 493 493 493 494 494 493 493 493 
+493 493 493 493 495 493 493 494 494 493 493 495 493 493 493 493 
+493 493 493 493 493 493 494 496 496 494 493 493 493 493 493 493 
+493 493 493 493 493 493 494 496 496 494 493 493 493 493 493 493 
+493 493 493 493 495 493 493 494 494 493 493 495 493 493 493 493 
+493 493 493 494 494 493 493 493 493 493 493 494 494 493 493 493 
+493 493 494 496 496 494 495 493 493 495 494 496 496 494 493 493 
+493 495 494 496 496 494 493 493 493 493 494 496 496 494 495 493 
+493 493 493 494 494 493 493 493 493 493 493 494 494 493 493 493 
+494 493 493 495 493 493 493 493 493 493 493 493 495 493 493 494 
+494 494 493 493 493 493 493 493 493 493 493 493 493 493 494 494 </universes>
+  </lattice>
+  <surface id="903" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="904" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="905" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="906" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="907" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="908" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="909" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="910" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="911" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="912" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="913" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

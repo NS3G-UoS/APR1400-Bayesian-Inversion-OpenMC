@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1873" material="1282" region="-1288" universe="703"/>
+  <cell id="1874" material="1288" region="1288 -1289" universe="703"/>
+  <cell id="1875" material="1287" region="1289 -1290" universe="703"/>
+  <cell id="1876" material="1288" region="1290" universe="703"/>
+  <cell id="1877" material="1283" region="-1288" universe="704"/>
+  <cell id="1878" material="1288" region="1288 -1289" universe="704"/>
+  <cell id="1879" material="1287" region="1289 -1290" universe="704"/>
+  <cell id="1880" material="1288" region="1290" universe="704"/>
+  <cell id="1881" material="1286" region="-1288" universe="705"/>
+  <cell id="1882" material="1288" region="1288 -1289" universe="705"/>
+  <cell id="1883" material="1287" region="1289 -1290" universe="705"/>
+  <cell id="1884" material="1288" region="1290" universe="705"/>
+  <cell id="1885" material="1288" region="-1291" universe="706"/>
+  <cell id="1886" material="1287" region="1291 -1292" universe="706"/>
+  <cell id="1887" material="1288" region="1292" universe="706"/>
+  <cell id="1888" fill="707" region="1295 -1296 1297 -1298 1293 -1294" universe="708"/>
+  <lattice id="707" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+704 704 703 703 703 703 703 703 703 703 703 703 703 703 704 704 
+704 703 703 705 703 703 703 703 703 703 703 703 705 703 703 704 
+703 703 703 704 704 703 703 703 703 703 703 704 704 703 703 703 
+703 705 704 706 706 704 703 703 703 703 704 706 706 704 705 703 
+703 703 704 706 706 704 705 703 703 705 704 706 706 704 703 703 
+703 703 703 704 704 703 703 703 703 703 703 704 704 703 703 703 
+703 703 703 703 705 703 703 704 704 703 703 705 703 703 703 703 
+703 703 703 703 703 703 704 706 706 704 703 703 703 703 703 703 
+703 703 703 703 703 703 704 706 706 704 703 703 703 703 703 703 
+703 703 703 703 705 703 703 704 704 703 703 705 703 703 703 703 
+703 703 703 704 704 703 703 703 703 703 703 704 704 703 703 703 
+703 703 704 706 706 704 705 703 703 705 704 706 706 704 703 703 
+703 705 704 706 706 704 703 703 703 703 704 706 706 704 705 703 
+703 703 703 704 704 703 703 703 703 703 703 704 704 703 703 703 
+704 703 703 705 703 703 703 703 703 703 703 703 705 703 703 704 
+704 704 703 703 703 703 703 703 703 703 703 703 703 703 704 704 </universes>
+  </lattice>
+  <surface id="1288" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="1289" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="1290" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="1291" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="1292" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="1293" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="1294" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="1295" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1296" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="1297" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1298" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

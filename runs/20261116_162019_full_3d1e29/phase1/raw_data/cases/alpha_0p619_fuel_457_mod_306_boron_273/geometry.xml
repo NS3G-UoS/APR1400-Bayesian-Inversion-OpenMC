@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1153" material="967" region="-793" universe="433"/>
+  <cell id="1154" material="973" region="793 -794" universe="433"/>
+  <cell id="1155" material="972" region="794 -795" universe="433"/>
+  <cell id="1156" material="973" region="795" universe="433"/>
+  <cell id="1157" material="968" region="-793" universe="434"/>
+  <cell id="1158" material="973" region="793 -794" universe="434"/>
+  <cell id="1159" material="972" region="794 -795" universe="434"/>
+  <cell id="1160" material="973" region="795" universe="434"/>
+  <cell id="1161" material="971" region="-793" universe="435"/>
+  <cell id="1162" material="973" region="793 -794" universe="435"/>
+  <cell id="1163" material="972" region="794 -795" universe="435"/>
+  <cell id="1164" material="973" region="795" universe="435"/>
+  <cell id="1165" material="973" region="-796" universe="436"/>
+  <cell id="1166" material="972" region="796 -797" universe="436"/>
+  <cell id="1167" material="973" region="797" universe="436"/>
+  <cell id="1168" fill="437" region="800 -801 802 -803 798 -799" universe="438"/>
+  <lattice id="437" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+434 434 433 433 433 433 433 433 433 433 433 433 433 433 434 434 
+434 433 433 435 433 433 433 433 433 433 433 433 435 433 433 434 
+433 433 433 434 434 433 433 433 433 433 433 434 434 433 433 433 
+433 435 434 436 436 434 433 433 433 433 434 436 436 434 435 433 
+433 433 434 436 436 434 435 433 433 435 434 436 436 434 433 433 
+433 433 433 434 434 433 433 433 433 433 433 434 434 433 433 433 
+433 433 433 433 435 433 433 434 434 433 433 435 433 433 433 433 
+433 433 433 433 433 433 434 436 436 434 433 433 433 433 433 433 
+433 433 433 433 433 433 434 436 436 434 433 433 433 433 433 433 
+433 433 433 433 435 433 433 434 434 433 433 435 433 433 433 433 
+433 433 433 434 434 433 433 433 433 433 433 434 434 433 433 433 
+433 433 434 436 436 434 435 433 433 435 434 436 436 434 433 433 
+433 435 434 436 436 434 433 433 433 433 434 436 436 434 435 433 
+433 433 433 434 434 433 433 433 433 433 433 434 434 433 433 433 
+434 433 433 435 433 433 433 433 433 433 433 433 435 433 433 434 
+434 434 433 433 433 433 433 433 433 433 433 433 433 433 434 434 </universes>
+  </lattice>
+  <surface id="793" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="794" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="795" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="796" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="797" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="798" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="799" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="800" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="801" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="802" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="803" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

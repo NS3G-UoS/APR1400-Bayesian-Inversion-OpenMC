@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="2065" material="1366" region="-1420" universe="775"/>
+  <cell id="2066" material="1372" region="1420 -1421" universe="775"/>
+  <cell id="2067" material="1371" region="1421 -1422" universe="775"/>
+  <cell id="2068" material="1372" region="1422" universe="775"/>
+  <cell id="2069" material="1367" region="-1420" universe="776"/>
+  <cell id="2070" material="1372" region="1420 -1421" universe="776"/>
+  <cell id="2071" material="1371" region="1421 -1422" universe="776"/>
+  <cell id="2072" material="1372" region="1422" universe="776"/>
+  <cell id="2073" material="1370" region="-1420" universe="777"/>
+  <cell id="2074" material="1372" region="1420 -1421" universe="777"/>
+  <cell id="2075" material="1371" region="1421 -1422" universe="777"/>
+  <cell id="2076" material="1372" region="1422" universe="777"/>
+  <cell id="2077" material="1372" region="-1423" universe="778"/>
+  <cell id="2078" material="1371" region="1423 -1424" universe="778"/>
+  <cell id="2079" material="1372" region="1424" universe="778"/>
+  <cell id="2080" fill="779" region="1427 -1428 1429 -1430 1425 -1426" universe="780"/>
+  <lattice id="779" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+776 776 775 775 775 775 775 775 775 775 775 775 775 775 776 776 
+776 775 775 777 775 775 775 775 775 775 775 775 777 775 775 776 
+775 775 775 776 776 775 775 775 775 775 775 776 776 775 775 775 
+775 777 776 778 778 776 775 775 775 775 776 778 778 776 777 775 
+775 775 776 778 778 776 777 775 775 777 776 778 778 776 775 775 
+775 775 775 776 776 775 775 775 775 775 775 776 776 775 775 775 
+775 775 775 775 777 775 775 776 776 775 775 777 775 775 775 775 
+775 775 775 775 775 775 776 778 778 776 775 775 775 775 775 775 
+775 775 775 775 775 775 776 778 778 776 775 775 775 775 775 775 
+775 775 775 775 777 775 775 776 776 775 775 777 775 775 775 775 
+775 775 775 776 776 775 775 775 775 775 775 776 776 775 775 775 
+775 775 776 778 778 776 777 775 775 777 776 778 778 776 775 775 
+775 777 776 778 778 776 775 775 775 775 776 778 778 776 777 775 
+775 775 775 776 776 775 775 775 775 775 775 776 776 775 775 775 
+776 775 775 777 775 775 775 775 775 775 775 775 777 775 775 776 
+776 776 775 775 775 775 775 775 775 775 775 775 775 775 776 776 </universes>
+  </lattice>
+  <surface id="1420" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="1421" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="1422" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="1423" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="1424" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="1425" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="1426" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="1427" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1428" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="1429" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1430" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

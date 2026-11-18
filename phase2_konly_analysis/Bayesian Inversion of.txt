@@ -1,0 +1,331 @@
+Bayesian Inversion of an Effective Gadolinium Parameter in a C2-Map-Based APR1400 PWR Assembly Using OpenMC
+A proof-of-concept study with heteroscedastic Gaussian-process emulation and leave-one-out blind validation
+Bassam A. Khuwaileh1,2, *, Dina Elhanan2, Ammar Alkhalidi2,3,4
+1Department of Mechanical & Nuclear Engineering, College of Engineering, University of Sharjah, Sharjah, UAE
+2Nuclear Energy Systems Research Group, Research Institute of Science and Engineering, University of Sharjah, Sharjah, 27272, United Arab Emirates
+3Mechanical and Maintenance Engineering Department, German Jordanian University, Amman 11180, Jordan
+4Sustainable and Renewable Energy Engineering Department, University of Sharjah, Sharjah 27272, United Arab Emirates.
+*Corresponding author: bkhuwaileh@sharjah.ac.ae
+Highlights
+    • A one-parameter Bayesian inverse workflow was demonstrated using 13 real OpenMC criticality calculations.
+    • The forward response changed by -786 pcm over , with endpoint signal-to-noise ratio 8.2.
+    • Leave-one-out inversion achieved posterior-mean MAE 0.0240 in , but credible intervals remained broad.
+
+Abstract
+Reactor-physics inverse problems are usually validated on synthetic, noise-free data, leaving open the question of whether real stochastic transport calculations can recover an unknown design parameter. The authors tested this directly: an effective gadolinium-strength parameter, α_Gd, was swept across 13 real OpenMC criticality calculations for a C2-map-based APR1400 assembly, reducing k∞ by 786 pcm (SNR 8.2) despite Monte Carlo noise of order 70 pcm. A heteroscedastic Gaussian-process surrogate and a deterministic Bayesian posterior, no MCMC, were then validated by genuinely blind leave-one-out inversion of every case. Recovery achieved a posterior-mean MAE of 0.024, and a fully held-out truth (αGd = 1.075) was rediscovered from its k∞ alone to within 0.7% relative error. The results show that a single integral response can identify the direction and magnitude of an absorber-strength parameter, but not pin it down tightly, motivating a Gd-specific observable as the next step.
+
+Keywords: inverse uncertainty quantification; Bayesian calibration; OpenMC; APR1400; gadolinium burnable absorber; Gaussian process; PWR; Monte Carlo uncertainty
+
+Nomenclature
+Symbol
+Definition
+
+Effective gadolinium-strength calibration parameter
+
+Infinite multiplication factor
+
+OpenMC statistical standard deviation
+
+Gaussian-process predictive standard deviation
+CrI
+Bayesian credible interval
+LOO
+Leave-one-out validation
+IUQ
+Inverse uncertainty quantification
+SNR
+Signal-to-Noise Ratio
+MCMC
+Markov Chain Monte Carlo
+MAE
+Mean Absolute Error
+MAP
+Maximum A Posteriori
+CEA
+Control Element Assembly
+ICI
+In-Core Instrument
+
+
+
+
+
+1. Introduction
+High-fidelity neutron-transport analysis is central to modern reactor design because it preserves detailed geometry and continuous-energy nuclear data while providing statistically defensible criticality predictions. OpenMC provides an open-source Monte Carlo framework for these calculations [1], and the ENDF/B-VII.1 library supplies the evaluated reaction, covariance, fission-yield, and decay data used in the present model [2]. The APR1400 benchmark hierarchy further provides a recognized basis for assessing pin-wise and high-fidelity methods for 16 x 16 pressurized-water-reactor CEA  [3]. The present work uses the benchmark C2 loading map only as the geometric basis of a reduced assembly-level inverse problem; it does not claim to reproduce the full benchmark state or reference solution.
+Bayesian calibration and inverse uncertainty quantification (IUQ) infer uncertain model parameters from observed responses rather than propagating uncertain inputs only in the forward direction. Kennedy and O’Hagan established a general Bayesian framework for calibrating computer models [4], and Rasmussen and Williams developed the Gaussian-process (GP) foundations that enable probabilistic emulation of expensive simulators [5]. In nuclear engineering, modular GP-based IUQ has emphasized model discrepancy, numerical uncertainty, and identifiability [6], while broader reviews have identified transparency and tractability as essential requirements for practical deployment [7].
+The objective of this study is to determine whether a statepoint-backed, one-dimensional Bayesian workflow can recover an effective absorber-strength parameter from stochastic Monte Carlo criticality calculations on modest computing hardware. The methodology combines a heteroscedastic GP treatment of OpenMC sampling uncertainty, direct posterior quadrature, and systematic leave-one-out blind recovery using only real transport points. This design makes failure modes and identifiability visible before extension to multiple observables or calibration parameters.
+
+
+Figure 1. Proof-of-concept workflow used in this study. OpenMC generates the frozen forward data; Phase II fits a heteroscedastic GP, evaluates a one-dimensional Bayesian posterior, and validates the inversion by leave-one-out blind recovery.
+
+        1.1 Related work and novelty of the present contribution
+Recent reactor-physics literature reflects a broad and mature forward sensitivity/uncertainty (S/U) tradition. Frosio et al. extended Bayesian data adjustment and representativity theory to multiple correlated experiments and coupled Boltzmann-Bateman problems [8]. Cabellos et al. propagated covariance data for U-235, U-238, and Pu-239 to the effective multiplication factor of fast-spectrum benchmarks and showed that uncertainty estimates can depend strongly on evaluated-library covariances and reaction correlations [9]. Bidaud and El-Amami examined criticality-constrained breeding-ratio sensitivities and showed that a k-reset constraint can substantially alter the magnitudes, signs, rankings, and correlation effects of sensitivities [10]. Valocchi et al. propagated newly evaluated delayed-neutron precursor-abundance covariances to the effective delayed-neutron fraction and demonstrated the importance of covariance structure and anticorrelation [11]. Bécares and Panizo assessed multiplication-factor and reactivity-effect uncertainties for fluoride-salt reactor concepts and found strong dependence on the reactor response, spectrum, and covariance library [12]. Collectively, these studies establish that forward nuclear-data uncertainty in integral reactor responses can be substantial and configuration dependent. None, however, addresses the inverse recovery of an unknown design or manufacturing parameter from a noisy integral response, which is the focus of the present work.
+The closest precedent in surrogate modeling is the OpenMC-based GP study by Molczan et al. [13]. That work demonstrated calibrated predictive uncertainty for PWR pin-cell criticality using a heteroscedastic GP trained on 400 Monte Carlo calculations. The present study uses a Matérn-family GP, stochastic OpenMC responses, and an explicit treatment of Monte Carlo uncertainty. The scientific objective is different, Molczan et al. solved the forward emulation problem whereas the present study inverts the surrogate to recover an unknown absorber-strength parameter from an observed response and validates the inference using statepoint-backed blind holdouts.
+Probabilistic treatment of stochastic simulation output is itself an active research area. Diaconeasa and Mosleh incorporated multiple sampling strategies into the ADS-IDAC dynamic probabilistic safety-assessment framework to propagate epistemic and aleatory uncertainty through discrete dynamic event trees [14]. Hajas et al. developed a forced-correlation variance-reduction method for dynamic Monte Carlo neutron-population calculations using a stochastic differential equation representation of the transport process [15]. These studies reinforce that stochastic simulation error is not merely a fixed nuisance quantity: its propagation, correlation, and reduction require explicit methodological treatment. In the present work, the statepoint-derived Monte Carlo uncertainty is incorporated into the GP training model and the Bayesian likelihood rather than being ignored or replaced with noise-free synthetic data.
+Positioned against this literature, the present contribution is distinguished by four elements. First, unlike forward S/U analyses [8]-[12], it solves an inverse problem: an unknown effective gadolinium-strength parameter is recovered from an integral criticality response. Second, unlike conventional train/test or random-split surrogate validation [13], it performs genuine blind parameter discovery by withholding each of the 13 OpenMC cases in turn from both GP training and likelihood construction until inference is complete. Third, the one-dimensional posterior is evaluated via direct deterministic quadrature on a 5,001-point grid rather than via Markov chain Monte Carlo, thereby eliminating the need for convergence diagnostics for a problem whose dimensionality does not justify sampling-based inference [6], [7]. Fourth, every quantity entering the analysis originates from executed OpenMC calculations, including the pointwise statistical uncertainties; no synthetic or noise-free response surface is used. These features make the workflow transparent and reproducible, and establish a baseline for evaluating whether an integral criticality response alone is sufficient to identify a burnable-absorber parameter in future fuel-design, digital-twin, surveillance, and uncertainty-informed licensing applications.
+2. Computational model and Phase I data
+2.1 C2-map-based assembly representation
+The radial model uses a 16×16 loading map with 168 high-enrichment fuel locations (3.64 wt% U-235), 52 low-enrichment fuel locations (3.14 wt% U-235), 16 Gd-bearing fuel locations, 16 CEA-footprint cells, and four central instrumentation-footprint cells. The pin pitch is 1.285 cm. Fuel, gap/moderator, cladding, and moderator regions are represented by concentric cylindrical pin-cell universes, and reflective boundaries are applied radially and at z = ±0.5 cm. Figure 2 reproduces the exact discrete loading map used by the Phase I runner.
+
+Figure 2. C2 loading map used in Phase I. H and L denote 3.64 and 3.14 wt% U-235 fuel, respectively; G denotes Gd-bearing fuel; C and I denote the CEA and central instrumentation footprint cells implemented by the runner.
+Table 1 summarizes the actual transport configuration recovered from the Phase I source files and statepoint inputs. 
+Table 1 –Transport Configuration Summy from Phase I Source Files & Statepoint Inputs
+Item
+Executed value
+OpenMC version
+0.15.3
+Nuclear data
+ENDF/B-VII.1 HDF5
+Assembly
+16×16 C2-map-based lattice
+Pin pitch
+1.285 cm
+Fuel radii
+0.4095 cm pellet; 0.4175/0.4750 cm cladding inner/outer radii
+Large-tube radii
+1.14495/1.24673 cm inner/outer
+Axial model
+1.0 cm slab, reflective at z = ±0.5 cm
+Radial boundary
+Reflective
+Parameter grid
+αGd = 0.85–1.15, 13 equally spaced values
+Particles per batch
+20,000
+Batches
+120 total; 30 inactive; 90 active
+Active histories per case
+1,800,000
+Random seed
+12345 for all 13 cases
+Neutron data temperature reported by OpenMC
+294 K
+
+2.2 Effective gadolinium parameter
+The Phase I code varied elemental Gd nuclide atom fractions while adjusting the fuel composition. Accordingly, throughout this paper   is interpreted strictly as an effective absorber-strength parameter. It must not be converted directly into an as-fabricated Gd2O3 mass fraction.
+,     (1)
+2.3 Forward data collection and traceability
+Thirteen OpenMC eigenvalue cases were successfully completed, with no transport failures reported in the Phase I result summary. Each case produced a statepoint file and an estimate of  and its OpenMC standard deviation. The total number of active histories across the 13-point sweep was 23,400,000. The mean one-sigma uncertainty in  was 67.5 pcm, ranging from 61.1 to 74.0 pcm.
+Table 2. Statepoint-derived Phase I data used in Phase II. The generic flux tally is shown for completeness but was not used in the inverse likelihood.
+
+
+1 k uncertainty (pcm)
+Global flux tally
+0.850
+1.197286
+69.0
+41.3043
+0.875
+1.195747
+69.5
+41.3006
+0.900
+1.194945
+71.2
+41.2974
+0.925
+1.194305
+62.3
+41.3101
+0.950
+1.193280
+72.4
+41.3101
+0.975
+1.193386
+71.8
+41.2978
+1.000
+1.193676
+63.0
+41.3220
+1.025
+1.193005
+68.5
+41.3048
+1.050
+1.191686
+66.5
+41.2756
+1.075
+1.191005
+61.6
+41.2741
+1.100
+1.189786
+61.1
+41.2571
+1.125
+1.191036
+74.0
+41.2909
+1.150
+1.189427
+66.1
+41.2446
+
+3. Bayesian inverse methodology
+3.1 Forward-response sensitivity and identifiability screening
+Before inversion, the forward response was screened for sensitivity relative to Monte Carlo uncertainty. The endpoint signal-to-noise ratio was defined as
+	(2)
+The observed endpoint change was -785.9 pcm, giving . A simple linear diagnostic gave , equivalent to approximately -230.4 pcm per 0.1 increase in , with . The linear fit is not used as the inverse surrogate; it is reported only as an interpretable sensitivity measure.
+
+Figure 3. Statepoint-derived  response versus . Error bars are one OpenMC standard deviation. The dashed line is a linear sensitivity diagnostic and is not used as the Bayesian forward model.
+3.2 Heteroscedastic Gaussian-process emulator
+A separate Gaussian-process (GP) regression model was fitted to the forward relationship . The GP is a surrogate for the OpenMC forward calculation, not an inverse model: its purpose is to provide a continuous probabilistic estimate of  at any  inside the sampled interval, together with an uncertainty associated with interpolation. The input and response were standardized before training. A constant kernel multiplied by a Matérn  kernel was used, consistent with a smooth but not infinitely differentiable one-dimensional response [5] [6]. The squared OpenMC standard deviations were supplied as point-specific observation-noise variances, so training explicitly accounts for the fact that different Monte Carlo cases have different statistical precision.
+Standardization was used to place the parameter and response on comparable numerical scales. If μα and sα are the sample mean and standard deviation, respectively, of ,  and  are the corresponding quantities for , then the GP was trained using the transformed variables  and . Predictions were subsequently transformed back to physical units. This standardization improves numerical conditioning and makes kernel length-scale optimization less sensitive to the different magnitudes of  and .
+,     (3)
+    (4)
+For the Matérn-5/2 covariance used here, the correlation between two standardized parameter locations separated by  can be written as
+    (5)
+where  controls the overall signal variance and  is the correlation length scale. Hyperparameters were optimized by maximizing the GP log marginal likelihood with multiple optimizer restarts. For the fit to all 13 available cases, the optimized kernel was 3.15² × Matérn () in standardized input coordinates. The relatively long optimized length scale is consistent with the visually smooth, nearly linear global trend in  over the studied  interval; the GP therefore acts primarily as a smooth stochastic interpolator rather than imposing unnecessary local structure.
+Heteroscedasticity is introduced through the known Monte Carlo uncertainty rather than through a separately learned noise process. For training point , scikit-learn receives the normalized variance . Consequently, a case with a larger OpenMC standard deviation is treated as less precise and exerts less leverage on the latent response than a case with a smaller standard deviation. This distinction is important because the scatter seen between neighboring  values is comparable to the effect of a single 0.025 parameter increment.
+The GP returns two quantities at every candidate : a predictive mean , used as the surrogate forward response, and a predictive standard deviation , representing uncertainty in the interpolated latent response. The latter is carried explicitly into the Bayesian likelihood; it is not used as a replacement for OpenMC statistical uncertainty. Thus, posterior uncertainty grows when either the observation is noisy or the surrogate is weakly constrained between training points.
+In every leave-one-out test, the GP was refitted after removing the case being inferred. Therefore, the surrogate used to discover a held-out  never had access to that point during training. This prevents data leakage and turns each leave-one-out calculation into a genuine extrapolation-based inverse-recovery test rather than a reconstruction of a training datum.
+The GP is used only inside the sampled prior interval 0.85 ≤  ≤ 1.15; no extrapolation beyond this domain is permitted. Figure 4 shows the fitted mean response and predictive band together with the statepoint-derived OpenMC values. Agreement should be judged relative to the OpenMC error bars rather than by requiring the surrogate to pass exactly through every noisy Monte Carlo realization.
+
+Figure 4. Heteroscedastic Matérn-5/2 GP emulator trained on all 13 OpenMC cases. OpenMC points retain their statepoint-derived one-sigma error bars; the solid curve is the posterior GP mean and the shaded region is the 95% predictive band for the latent forward response. The surrogate is used to evaluate  continuously across the  prior interval.
+3.3 Grid-evaluated Bayesian posterior
+The surrogate enters the inverse problem through the likelihood. For each candidate αGd on the posterior grid, the GP supplies the forward prediction  and its interpolation uncertainty . The measured or held-out  is then compared with that predicted response. The total variance combines the assumed observation uncertainty, the OpenMC statistical uncertainty associated with the held-out observation, and the GP predictive uncertainty. A Gaussian error model was used:
+    (6)
+    (7)
+The observation component was set to 50 pcm (). This σobs term is kept constant in every leave-one-out evaluation reported in Section 4.2, even though those 13 tests compare one OpenMC realization against a surrogate fitted to the other 12 and involve no independent experimental measurements. It is included there for methodological consistency with the eventual blind experiment rather than because an additional physical measurement error is present. Its effect is to widen the leave-one-out credible intervals relative to a purely computational cross-validation using only σ_MC and σ_GP. The reported 84.6% coverage therefore occurs despite this added variance, and the shortfall relative to the nominal 95% level is discussed in Section 4.2 and Section 5.2 With the uniform prior in Eq. (1), the posterior is proportional to the likelihood inside the prior bounds. Because the calibration problem is one-dimensional, the posterior was evaluated deterministically on 5,001 equally spaced  points. Numerical integration was used to obtain the posterior mean, standard deviation, median, and equal-tailed 95% credible interval. This direct strategy avoids MCMC convergence diagnostics and is fully reproducible for the present problem.
+3.4 Leave-one-out blind validation
+The supplied Phase I archive contained a manifest value  but no independent OpenMC transport calculation at that parameter. Therefore, constructing a posterior for 1.073 would have required inventing an observation and was rejected. Instead, each of the 13 real OpenMC points was treated in turn as a blind observation: the point was removed, the GP was refitted to the remaining 12 cases, and a posterior was calculated using only the held-out  value and its uncertainty. This provides 13 genuinely statepoint-backed inverse-recovery tests.
+4. Results
+4.1 Forward-response behavior
+The global response is clearly informative:  decreases from 1.197286 at  to  at . The total shift of 785.9 pcm is more than eight times the combined endpoint Monte Carlo standard deviation. Nevertheless, the response is not pointwise monotonic because stochastic fluctuations are comparable to the change induced by a single 0.025-parameter increment. This distinction, strong global sensitivity but modest local resolution, is central to the inverse results.
+Figure 5 quantifies each adjacent response increment relative to its combined Monte Carlo uncertainty. The three upward local changes are less than approximately 1.5 standard deviations combined, so the observed reversals are statistically consistent with Monte Carlo noise rather than evidence of a physically increasing reactivity trend with absorber strength.
+
+Figure 5. Adjacent  changes normalized by the combined Monte Carlo standard deviation. Small local sign reversals remain inside approximately ±2 and are consistent with sampling noise.
+4.2 Leave-one-out inverse recovery
+Table 3 – Metrics & Results for Leave-one-out Inverse Recovery for all 13 OpenMC Cases
+Metric
+Result
+Number of blind holdouts
+13
+Posterior-mean MAE in 
+0.0240
+Posterior-mean RMSE in 
+0.0278
+MAP MAE in 
+0.0244
+MAP RMSE in 
+0.0305
+Nominal 95% CrI coverage
+84.6% (11/13)
+95% CrI coverage, interior holdouts only
+100% (11/13 total, 11/11 interior)
+Average 95% CrI width
+0.1269
+
+The recovery plot in Figure 6 shows that the posterior means broadly track the identity line, but the uncertainty intervals are wide relative to the 0.30-wide prior. The two uncovered cases are the endpoint holdouts (α_Gd = 0.85 and 1.15). When an endpoint is withheld, the GP is constrained by neighboring points on one side only, so these two tests are one-sided and extrapolation-like rather than true interpolation. In addition, the uniform prior is truncated at the sampled bounds, so the posterior cannot extend beyond them and is pulled toward the interior. Coverage for the 11 interior holdouts was 100% (11/11), whereas the endpoint cases are inherently the most demanding. With only 13 tests, the aggregate 84.6% should not be overinterpreted; two misses at a nominal 95% level occur with probability of roughly 14% even for a perfectly calibrated procedure. This under-coverage should not be overinterpreted with only 13 tests, but it is consistent with the known limitations of the current noise model, especially the reuse of a common OpenMC seed across all cases.
+
+Figure 6. Leave-one-out inverse recovery for all 13 OpenMC cases. Points show posterior means and vertical bars show equal-tailed 95% credible intervals. The dashed diagonal denotes perfect recovery.
+4.3 Blind calibration and discovery of α_Gd = 1.075
+The  case provides a direct blind calibration/discovery test. The point was removed completely from GP training, so the surrogate was fitted only to the remaining 12 OpenMC cases. The inverse calculation was then given only the held-out statepoint response,  with  (61.6 pcm), together with the assumed 50 pcm observation uncertainty. The value  was used only after inference to assess recovery accuracy.
+Table 4 – Blind Calibration & Discovery Test for Inverse Calculation given 
+Quantity
+Value
+Held-out 
+1.0750
+Observed 
+1.19100494
+OpenMC 1 uncertainty
+61.6 pcm
+Assumed observation 1 uncertainty
+50 pcm
+Posterior MAP
+1.0835
+Posterior mean
+1.0825
+Posterior median
+1.0836
+Posterior standard deviation
+0.0348
+95% credible interval
+[1.0119, 1.1435]
+Truth contained in 95% CrI
+Yes
+
+Interpreted strictly as a blind parameter-discovery experiment, the inversion recovered the withheld parameter without using its α value in either GP training or likelihood construction. The GP first mapped each candidate  to a probabilistic  prediction; the Bayesian step then ranked those candidate values according to how well their predicted  distributions agreed with the single held-out observation. The posterior mean, 1.0825, differs from the hidden value 1.0750 by 0.0075 (), while the MAP estimate, 1.0835, differs by 0.0085 (). Thus, the combined surrogate-plus-Bayesian procedure successfully identifies the approximate hidden Gd-strength parameter from  alone. The wider 95% credible interval [1.0119, 1.1435], however, indicates that the point estimate is considerably more precise than the information content warrants for the full posterior.
+
+
+Figure 7. Posterior for the blind  holdout. The held-out truth is not used to fit the GP or construct the likelihood; it is shown only for validation. The posterior is correctly centered near the truth but remains broad.
+
+
+Figure 8. Direct visualization of the blind  discovery experiment. The horizontal interval is the 95% credible interval; symbols denote the posterior mean and MAP estimate, and the dashed line indicates the held-out truth revealed only for validation.
+5. Discussion
+5.1 What inverse results establish
+The first result is positive: an integral criticality response can identify the direction and approximate magnitude of a single effective absorber parameter with very few Monte Carlo design points. The endpoint SNR of 8.2 confirms that the chosen parameter yields a response that exceeds the stochastic uncertainty over the full prior range. The GP therefore does not need to manufacture a trend from noise; it interpolates a clear transport signal. The  holdout makes this result concrete: after withholding the case entirely, the inversion recovered a posterior mean of 1.0825 and a MAP of 1.0835, corresponding to relative errors of approximately 0.69% and 0.79%, respectively.
+The second result is equally important: global sensitivity does not imply strong local identifiability. A 0.025 change in  corresponds to only about 58 pcm according to the linear diagnostic slope, which is of the same order as the 61–74 pcm one-sigma OpenMC uncertainties. Consequently, neighboring parameter values are difficult to distinguish from  alone. This explains both the broad 95% credible intervals and the modest mean absolute recovery error. Increasing particle histories would improve local resolution, but a more efficient approach is to add a response more directly connected to Gd absorption.
+5.2 Interpretation and adequacy of the surrogate model
+The surrogate is central to the inversion because the OpenMC campaign provides only 13 discrete parameter values, whereas the posterior is evaluated on 5,001 candidate values. Without a surrogate, inference would either be restricted to the original grid or would require an arbitrary deterministic interpolation that does not quantify interpolation uncertainty. The GP converts the discrete stochastic OpenMC calculations into a continuous probability model for the forward response, while retaining uncertainty about the response between sampled points. This is precisely the role for which GP emulators are commonly used in Bayesian calibration of expensive computer models [4] [5] [6].
+The fitted response should not be interpreted as evidence that the underlying physics is intrinsically Gaussian or that  is exactly a GP realization. Rather, the GP is a statistical emulator of the smooth one-dimensional map generated by OpenMC. Its suitability here follows from three empirical observations: (i) the response has a strong global trend with endpoint SNR 8.22, (ii) deviations from monotonicity are small relative to combined Monte Carlo uncertainty, and (iii) the optimized long Matérn length scale indicates that the data do not support rapid oscillatory structure. These features make a low-complexity Matérn GP a more defensible choice than a high-capacity neural surrogate for the present 13-point dataset.
+The surrogate nevertheless introduces an additional source of uncertainty and possible bias. Near the center of the sampled domain, multiple neighboring OpenMC points constrain the GP, whereas uncertainty generally increases as support becomes sparse or when a point is removed during leave-one-out validation. The Bayesian likelihood therefore includes  explicitly. The broad posterior obtained for the  blind case is not a failure of the surrogate; it reflects the combined fact that adjacent OpenMC responses differ by roughly the same order as their Monte Carlo uncertainty and that  is an integral response with limited local parameter resolution. A tighter posterior requires either more precise transport data, a more informative response, or both.
+A further caveat is that the present GP treats the supplied pointwise OpenMC variances as independent training-noise variances. Because the available Phase I archive reused a common Monte Carlo seed across cases, some cross-case error correlation may exist and is not represented by the diagonal noise model. This is one plausible contributor to the observed 84.6% leave-one-out coverage relative to the nominal 95% level, another key contribution is the one-sided nature of the endpoint holdouts. Future calculations with unique deterministic seeds, or an explicitly estimated covariance model, will make the probabilistic interpretation of the surrogate and posterior more rigorous.
+5.3 Why a Gd-specific response is the logical next observable
+A Gd-isotope absorption tally would provide a local physics observable whose sensitivity is directly attributable to the parameter being calibrated, while  would retain its role as an integral neutronic constraint. The combined posterior should therefore reduce parameter degeneracy and provide a stronger physics-based identifiability argument than  alone. This is consistent with the broader IUQ principle that calibration quality depends not only on the number of observations but also on their sensitivity and independence [6] [7].
+5.4 Limitations of the current Phase I implementation
+The present results must be interpreted within the executed model, not the intended benchmark model. Table 5 lists the most consequential discrepancies identified from the Phase I source, XML files, and OpenMC logs.
+Table 5 – Summary of Current Phase I Implementation Challenges & Proposed Corrections
+ Limitations
+Consequence for interpretation
+Required correction
+
+All cases use seed 12345
+Cross-case MC errors may be correlated; independence assumption in the likelihood is approximate
+Use deterministic but unique seeds per case or explicitly estimate common-random-number covariance
+
+OpenMC reports 294 K neutron data
+Not the intended APR1400 HFP-like 900 K fuel / 600 K moderator state
+Assign material temperatures and verify loaded cross-section temperatures
+
+Gd varied through elemental atom fractions
+ is only an effective absorber parameter, not a physical Gd2O3 weight multiplier
+Construct 2 wt%-enriched UO2 + Gd2O3 by weight with fixed pellet density
+
+Gd varied through elemental atom fractions
+ is only an effective absorber parameter, not a physical Gd2O3 weight multiplier
+Construct 2 wt%-enriched UO2 + Gd2O3 by weight with fixed pellet density
+
+
+Only  and generic flux collected
+Cannot perform Gd-response-only or combined inversion
+Add MaterialFilter tallies for Gd155/Gd157 absorption and total fuel fission
+
+No independent  truth run
+Final planned blind posterior cannot be evaluated
+Run a high-precision truth case and expose only response values to Phase II
+No higher-precision reference subset
+Cannot quantify accuracy/cost trade-off across precision levels
+Add selected high-history cases across the prior domain
+
+
+These limitations do not invalidate the numerical proof-of-concept because the Bayesian analysis is performed consistently on the outputs of the executed stochastic model. They do, however, prevent interpreting the recovered  as an APR1400 manufacturing parameter or claiming benchmark validation. The appropriate current validity label is therefore “method-development proof of concept.”
+5.5 Implications for an industry-oriented workflow
+A practical inverse-calibration workflow for fuel-design or reactor-analysis applications should preserve the separation demonstrated here between data generation and statistical inference. Phase I should create an immutable, statepoint-traceable response database, while Phase II should be able to change priors, emulators, likelihoods, and diagnostics without rerunning transport. This separation improves reproducibility and supports independent QA. For a one-dimensional parameter, direct posterior quadrature is also preferable to MCMC because it is deterministic, inexpensive, and makes multimodality or boundary concentration immediately visible.
+For the corrected follow-on study, the most informative comparison would be three posteriors obtained from the same blind truth:  only,  only, and the combined response. A second experiment could then vary Monte Carlo precision to quantify the trade-off between particle histories and posterior width. Only after these steps are stable would adaptively sampling or a second calibration parameter be justified.
+6. Conclusions
+A 13-point OpenMC sweep over  produced a clear global criticality response of 785.9 pcm with an endpoint SNR of 8.22, and a heteroscedastic Matérn GP represented this one-dimensional stochastic response while incorporating point-specific OpenMC uncertainties. Direct Bayesian grid evaluation, without MCMC, recovered leave-one-out parameter values with a posterior mean MAE of 0.0240 and an RMSE of 0.0278. In the real blind  holdout experiment, the model was trained without that case and was supplied only its  response; it recovered a posterior mean of 1.0825 and MAP of 1.0835, corresponding to relative errors of approximately 0.69% and 0.79%, respectively, while the 95% CrI [1.0119, 1.1435] contained the hidden value. The broad posterior interval nevertheless shows that  alone is not locally informative enough at the current Monte Carlo precision for tight Gd calibration. The current Phase I implementation is not benchmark-quality due to temperature, material mixing, geometry, seed, and missing tally issues, and these must be corrected before physical APR1400 interpretation. The recommended next study is a corrected C2 campaign with independent truth data and a Gd155+Gd157 absorption-to-fission response, followed by k-only, Gd-response-only, and combined Bayesian inversions.
+Data and software availability
+The present manuscript is based on statepoint-derived results contained in the supplied Phase I archive and on the Phase II analysis package generated from that archive. The numerical analysis uses Python, NumPy/SciPy, scikit-learn GaussianProcessRegressor, and Matplotlib. The OpenMC calculations were executed with OpenMC 0.15.3. For publication, the frozen CSV data, analysis script, posterior grid, and figure-generation script should be deposited with the manuscript or in a public repository.
+AI Usage Declaration
+Artificial intelligence tools were used in a supporting role during this study and manuscript preparation. AI-assisted tools were used to help generate portions of the Python code employed for data processing, visualization, and statistical analysis. AI systems were also used to propose initial text drafts based on research findings and literature curated by the authors, and to assist with proofreading, grammar improvement, language refinement, and semantic editing. All scientific interpretations, methodology development, model implementation, verification of mathematical formulations, validation of results, literature selection, and final editorial decisions were performed by the authors. All AI-assisted content was critically reviewed, modified where necessary, and approved by the authors, who assume full responsibility for the accuracy, integrity, and scholarly content of the manuscript.
+
+References
+    1. P. K. Romano, N. E. Horelik, B. R. Herman, A. G. Nelson, B. Forget, and K. Smith, “OpenMC: A state-of-the-art Monte Carlo code for research and development,” Ann Nucl Energy, vol. 82, pp. 90–97, Aug. 2015, doi: 10.1016/J.ANUCENE.2014.07.048.
+    2. M. B. Chadwick et al., “ENDF/B-VII.1 Nuclear Data for Science and Technology: Cross Sections, Covariances, Fission Product Yields and Decay Data,” Nuclear Data Sheets, vol. 112, no. 12, pp. 2887–2996, Dec. 2011, doi: 10.1016/J.NDS.2011.11.002.
+    3. H. Yu, H. Hong, and J. Yoon, “Analysis of the APR1400 benchmark using high-fidelity pin-wise core calculation codes,” Energies, vol. 17, no. 14, Art. no. 3498, Jul. 2024, doi: 10.3390/en17143498.
+    4. M. C. Kennedy and A. O’Hagan, “Bayesian Calibration of Computer Models,” J R Stat Soc Series B Stat Methodol, vol. 63, no. 3, pp. 425–464, Sep. 2001, doi: 10.1111/1467-9868.00294.
+    5. C. E. Rasmussen and C. K. I. Williams, Gaussian Processes for Machine Learning. Cambridge, MA, USA: MIT Press, 2006.
+    6. X. Wu, T. Kozlowski, H. Meidani, and K. Shirvan, “Inverse uncertainty quantification using the modular Bayesian approach based on Gaussian process, Part 1: Theory,” Nuclear Engineering and Design, vol. 335, pp. 339–355, Aug. 2018, doi: 10.1016/J.NUCENGDES.2018.06.004.
+    7. X. Wu, Z. Xie, F. Alsafadi, and T. Kozlowski, “A comprehensive survey of inverse uncertainty quantification of physical model parameters in nuclear system thermal–hydraulics codes,” Nuclear Engineering and Design, vol. 384, p. 111460, Dec. 2021, doi: 10.1016/J.NUCENGDES.2021.111460.
+    8. T. Frosio, T. Bonaccorsi, and P. Blaise, “Extension of Bayesian inference for multi-experimental and coupled problem in neutronics − a revisit of the theoretical approach,” EPJ Nuclear Sci. Technol., vol. 4, 2018, [Online]. Available: https://doi.org/10.1051/epjn/2018046
+    9. O. Cabellos, N. García-Herranz, I. Hill, I. Kodeli, and W. Zwermann, “Impact of nuclear data uncertainties of U-235, U-238, and Pu-239 in benchmarks representative of small fast reactors,” in Proc. PHYSOR 2026, Torino, Italy, Apr. 2026.
+    10. Bidaud and H. El-Amami, “Breeding ratio nuclear data uncertainty analysis: Impact of criticality constraint,” in Proc. PHYSOR 2026, Torino, Italy, Apr. 2026.
+    11. G. Valocchi, J. Tommasi, and P. Leconte, “Nuclear data uncertainty propagation on the beta effective: Impact of the precursor abundances and new covariance matrices from the ALDEN experiment,” in Proc. PHYSOR 2026, Torino, Italy, Apr. 2026.
+    12. V. Bécares and S. Panizo, “Uncertainty analyses of fluoride-salt molten salt reactors: FHR and MSFR,” in Proc. PHYSOR 2026, Torino, Italy, Apr. 2026.
+    13. A. Molczan, Z. Malecha, and W. Zacharczuk, “Gaussian Process Surrogate Model with Uncertainty Quantification for PWR Pin-Cell Criticality Prediction,” 2026, doi: 10.3390/app16115174.
+    14. M. A. Diaconeasa and A. Mosleh, “Discrete dynamic event tree uncertainty quantification in the ADS-IDAC dynamic PSA software platform,” in Proc. 14th Int. Conf. Probabilistic Safety Assessment and Management (PSAM 14), Los Angeles, CA, USA, Sep. 2018.
+    15. T. Z. Hajas, E. Pázmán, and D. Légrády, “Variance reduction for dynamic Monte Carlo using forced correlation derived from stochastic calculus,” in Proc. PHYSOR 2026, Torino, Italy, Apr. 2026.

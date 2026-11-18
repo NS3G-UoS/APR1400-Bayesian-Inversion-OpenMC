@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-11-16T17:16:29.736515+00:00",
+  "mode": "full",
+  "dataset_csv": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_162019_full_3d1e29/phase1/processed_data/openmc_dataset.csv",
+  "n_rows_used": 65,
+  "tally_available": true,
+  "obs_modes_evaluated": [
+    "k_only",
+    "k_plus_tally"
+  ],
+  "alpha_range": [
+    0.2687959978356957,
+    1.2297984743490815
+  ],
+  "models": [
+    "gp",
+    "wlin",
+    "wquad",
+    "wquad_loo"
+  ],
+  "n_grid": 5001,
+  "alpha_min": 0.25,
+  "alpha_max": 1.25,
+  "measurement_scenarios": {
+    "obs50pcm": 0.0005,
+    "obs0": 0.0
+  },
+  "default_summary_csv": "/home/dina/Downloads/apr1400 bayesian inverse code/runs/20261116_162019_full_3d1e29/phase2/results/loo_model_summary_full_obs50pcm_k_only.csv",
+  "gp_diagnostics": {
+    "length_scale": [
+      10.262589100545485,
+      42.7318913245741,
+      8.924946810661954,
+      5.891571848769281
+    ],
+    "lower_bound": 0.01,
+    "upper_bound": 300.0,
+    "near_upper_features": [],
+    "near_lower_features": [],
+    "convergence_warnings": [],
+    "n_restarts_optimizer": 9
+  },
+  "identifiability_k_only": {
+    "direction_correlation_mean_vs_truth": 0.9786088798645485,
+    "magnitude_slope_mean_vs_truth": 0.9633369957944602,
+    "direction_negative_fraction": 1.0,
+    "magnitude_median_abs_dk_dalpha": 0.03329612562031238,
+    "median_k_span_over_alpha_grid": 0.03351435829842009,
+    "posterior_tightness_label": "moderate",
+    "mean_width95": 0.2595420680167053,
+    "mean_width95_fraction_of_prior": 0.2595420680167053,
+    "mae_mean": 0.054105751394541324,
+    "mre_mean": 0.08311314614955977
+  }
+}

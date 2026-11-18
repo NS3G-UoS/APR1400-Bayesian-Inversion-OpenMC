@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="2049" material="1359" region="-1409" universe="769"/>
+  <cell id="2050" material="1365" region="1409 -1410" universe="769"/>
+  <cell id="2051" material="1364" region="1410 -1411" universe="769"/>
+  <cell id="2052" material="1365" region="1411" universe="769"/>
+  <cell id="2053" material="1360" region="-1409" universe="770"/>
+  <cell id="2054" material="1365" region="1409 -1410" universe="770"/>
+  <cell id="2055" material="1364" region="1410 -1411" universe="770"/>
+  <cell id="2056" material="1365" region="1411" universe="770"/>
+  <cell id="2057" material="1363" region="-1409" universe="771"/>
+  <cell id="2058" material="1365" region="1409 -1410" universe="771"/>
+  <cell id="2059" material="1364" region="1410 -1411" universe="771"/>
+  <cell id="2060" material="1365" region="1411" universe="771"/>
+  <cell id="2061" material="1365" region="-1412" universe="772"/>
+  <cell id="2062" material="1364" region="1412 -1413" universe="772"/>
+  <cell id="2063" material="1365" region="1413" universe="772"/>
+  <cell id="2064" fill="773" region="1416 -1417 1418 -1419 1414 -1415" universe="774"/>
+  <lattice id="773" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+770 770 769 769 769 769 769 769 769 769 769 769 769 769 770 770 
+770 769 769 771 769 769 769 769 769 769 769 769 771 769 769 770 
+769 769 769 770 770 769 769 769 769 769 769 770 770 769 769 769 
+769 771 770 772 772 770 769 769 769 769 770 772 772 770 771 769 
+769 769 770 772 772 770 771 769 769 771 770 772 772 770 769 769 
+769 769 769 770 770 769 769 769 769 769 769 770 770 769 769 769 
+769 769 769 769 771 769 769 770 770 769 769 771 769 769 769 769 
+769 769 769 769 769 769 770 772 772 770 769 769 769 769 769 769 
+769 769 769 769 769 769 770 772 772 770 769 769 769 769 769 769 
+769 769 769 769 771 769 769 770 770 769 769 771 769 769 769 769 
+769 769 769 770 770 769 769 769 769 769 769 770 770 769 769 769 
+769 769 770 772 772 770 771 769 769 771 770 772 772 770 769 769 
+769 771 770 772 772 770 769 769 769 769 770 772 772 770 771 769 
+769 769 769 770 770 769 769 769 769 769 769 770 770 769 769 769 
+770 769 769 771 769 769 769 769 769 769 769 769 771 769 769 770 
+770 770 769 769 769 769 769 769 769 769 769 769 769 769 770 770 </universes>
+  </lattice>
+  <surface id="1409" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="1410" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="1411" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="1412" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="1413" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="1414" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="1415" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="1416" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1417" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="1418" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1419" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

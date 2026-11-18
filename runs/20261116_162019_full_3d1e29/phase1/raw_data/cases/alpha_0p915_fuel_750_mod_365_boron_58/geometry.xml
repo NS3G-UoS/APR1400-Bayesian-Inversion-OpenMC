@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1393" material="1072" region="-958" universe="523"/>
+  <cell id="1394" material="1078" region="958 -959" universe="523"/>
+  <cell id="1395" material="1077" region="959 -960" universe="523"/>
+  <cell id="1396" material="1078" region="960" universe="523"/>
+  <cell id="1397" material="1073" region="-958" universe="524"/>
+  <cell id="1398" material="1078" region="958 -959" universe="524"/>
+  <cell id="1399" material="1077" region="959 -960" universe="524"/>
+  <cell id="1400" material="1078" region="960" universe="524"/>
+  <cell id="1401" material="1076" region="-958" universe="525"/>
+  <cell id="1402" material="1078" region="958 -959" universe="525"/>
+  <cell id="1403" material="1077" region="959 -960" universe="525"/>
+  <cell id="1404" material="1078" region="960" universe="525"/>
+  <cell id="1405" material="1078" region="-961" universe="526"/>
+  <cell id="1406" material="1077" region="961 -962" universe="526"/>
+  <cell id="1407" material="1078" region="962" universe="526"/>
+  <cell id="1408" fill="527" region="965 -966 967 -968 963 -964" universe="528"/>
+  <lattice id="527" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+524 524 523 523 523 523 523 523 523 523 523 523 523 523 524 524 
+524 523 523 525 523 523 523 523 523 523 523 523 525 523 523 524 
+523 523 523 524 524 523 523 523 523 523 523 524 524 523 523 523 
+523 525 524 526 526 524 523 523 523 523 524 526 526 524 525 523 
+523 523 524 526 526 524 525 523 523 525 524 526 526 524 523 523 
+523 523 523 524 524 523 523 523 523 523 523 524 524 523 523 523 
+523 523 523 523 525 523 523 524 524 523 523 525 523 523 523 523 
+523 523 523 523 523 523 524 526 526 524 523 523 523 523 523 523 
+523 523 523 523 523 523 524 526 526 524 523 523 523 523 523 523 
+523 523 523 523 525 523 523 524 524 523 523 525 523 523 523 523 
+523 523 523 524 524 523 523 523 523 523 523 524 524 523 523 523 
+523 523 524 526 526 524 525 523 523 525 524 526 526 524 523 523 
+523 525 524 526 526 524 523 523 523 523 524 526 526 524 525 523 
+523 523 523 524 524 523 523 523 523 523 523 524 524 523 523 523 
+524 523 523 525 523 523 523 523 523 523 523 523 525 523 523 524 
+524 524 523 523 523 523 523 523 523 523 523 523 523 523 524 524 </universes>
+  </lattice>
+  <surface id="958" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="959" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="960" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="961" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="962" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="963" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="964" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="965" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="966" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="967" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="968" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

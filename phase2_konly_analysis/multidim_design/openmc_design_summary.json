@@ -1,0 +1,35 @@
+{
+  "n_total_runs": 103,
+  "n_unique": 96,
+  "n_replicates": 7,
+  "region_counts": {
+    "general_design": 60,
+    "targeted_boron_slice": 20,
+    "targeted_moderator_slice": 16,
+    "replicate_noisy_region": 7
+  },
+  "ranges": {
+    "alpha_gd": [
+      0.26393628770820154,
+      1.2162319121431817
+    ],
+    "fuel_temp": [
+      355.8808430371673,
+      994.6171482234209
+    ],
+    "moderator_temp": [
+      299.45805589695823,
+      580.9748952223447
+    ],
+    "boron_ppm": [
+      0.0,
+      2200.0
+    ]
+  },
+  "feasibility_constraint": "fuel_temp >= moderator_temp",
+  "replicate_region": "high-alpha + high-boron + high-fuel-region, with additional repeated runs for noise estimation",
+  "library_coverage_note": "Confirm library support for 294, 600, 900, and 1200 K before using 1000 K points; 1000 K may require interpolation between 900 and 1200 K.",
+  "alpha_gd_definition": "effective absorber-strength multiplier, not a literal Gd2O3 mass fraction unless the chemistry model is explicitly built that way.",
+  "fuel_temperature_definition": "single volume-averaged Doppler-effective fuel temperature in K; not a centerline or melting-limit temperature.",
+  "moderator_temperature_definition": "single bulk coolant/moderator temperature in K at the design pressure."
+}

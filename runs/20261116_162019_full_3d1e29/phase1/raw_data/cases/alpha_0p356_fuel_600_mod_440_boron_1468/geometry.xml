@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1217" material="995" region="-837" universe="457"/>
+  <cell id="1218" material="1001" region="837 -838" universe="457"/>
+  <cell id="1219" material="1000" region="838 -839" universe="457"/>
+  <cell id="1220" material="1001" region="839" universe="457"/>
+  <cell id="1221" material="996" region="-837" universe="458"/>
+  <cell id="1222" material="1001" region="837 -838" universe="458"/>
+  <cell id="1223" material="1000" region="838 -839" universe="458"/>
+  <cell id="1224" material="1001" region="839" universe="458"/>
+  <cell id="1225" material="999" region="-837" universe="459"/>
+  <cell id="1226" material="1001" region="837 -838" universe="459"/>
+  <cell id="1227" material="1000" region="838 -839" universe="459"/>
+  <cell id="1228" material="1001" region="839" universe="459"/>
+  <cell id="1229" material="1001" region="-840" universe="460"/>
+  <cell id="1230" material="1000" region="840 -841" universe="460"/>
+  <cell id="1231" material="1001" region="841" universe="460"/>
+  <cell id="1232" fill="461" region="844 -845 846 -847 842 -843" universe="462"/>
+  <lattice id="461" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+458 458 457 457 457 457 457 457 457 457 457 457 457 457 458 458 
+458 457 457 459 457 457 457 457 457 457 457 457 459 457 457 458 
+457 457 457 458 458 457 457 457 457 457 457 458 458 457 457 457 
+457 459 458 460 460 458 457 457 457 457 458 460 460 458 459 457 
+457 457 458 460 460 458 459 457 457 459 458 460 460 458 457 457 
+457 457 457 458 458 457 457 457 457 457 457 458 458 457 457 457 
+457 457 457 457 459 457 457 458 458 457 457 459 457 457 457 457 
+457 457 457 457 457 457 458 460 460 458 457 457 457 457 457 457 
+457 457 457 457 457 457 458 460 460 458 457 457 457 457 457 457 
+457 457 457 457 459 457 457 458 458 457 457 459 457 457 457 457 
+457 457 457 458 458 457 457 457 457 457 457 458 458 457 457 457 
+457 457 458 460 460 458 459 457 457 459 458 460 460 458 457 457 
+457 459 458 460 460 458 457 457 457 457 458 460 460 458 459 457 
+457 457 457 458 458 457 457 457 457 457 457 458 458 457 457 457 
+458 457 457 459 457 457 457 457 457 457 457 457 459 457 457 458 
+458 458 457 457 457 457 457 457 457 457 457 457 457 457 458 458 </universes>
+  </lattice>
+  <surface id="837" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="838" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="839" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="840" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="841" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="842" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="843" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="844" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="845" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="846" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="847" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

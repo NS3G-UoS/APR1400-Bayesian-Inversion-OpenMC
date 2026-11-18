@@ -1,0 +1,187 @@
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.3
+     Commit Hash | 27e38e894697bb32a1dac7848d2618818b6b8daf
+       Date/Time | 2026-11-13 13:00:31
+   MPI Processes | 1
+  OpenMP Threads | 1
+
+ Reading settings XML file...
+ Reading cross sections XML file...
+ Reading chain file:
+ /home/dina/ArcLink/physics_models/openmc/data/depletion/chain_endfb71_thermal.xm
+ l...
+ Reading materials XML file...
+ Reading geometry XML file...
+ Reading U234 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/U234.h5
+ Reading U235 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/U235.h5
+ Reading U238 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/U238.h5
+ Reading U236 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/U236.h5
+ Reading O16 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/O16.h5
+ Reading O17 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/O17.h5
+ Reading Gd152 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd152.h5
+ Reading Gd154 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd154.h5
+ Reading Gd155 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd155.h5
+ Reading Gd156 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd156.h5
+ Reading Gd157 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd157.h5
+ Reading Gd158 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd158.h5
+ Reading Gd160 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Gd160.h5
+ Reading Zr90 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Zr90.h5
+ Reading Zr91 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Zr91.h5
+ Reading Zr92 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Zr92.h5
+ Reading Zr94 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Zr94.h5
+ Reading Zr96 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/Zr96.h5
+ Reading H1 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/H1.h5
+ Reading H2 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/H2.h5
+ Reading B10 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/B10.h5
+ Reading B11 from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/B11.h5
+ Reading c_H_in_H2O from
+ /home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/c_H_in_H2O.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 900 K
+ Reading tallies XML file...
+ Preparing distributed cell instances...
+ Reading plot XML file...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for U235
+ Initializing source particles...
+
+ ====================>     K EIGENVALUE SIMULATION     <====================
+
+  Bat./Gen.      k            Average k
+  =========   ========   ====================
+        1/1    1.18025
+        2/1    1.14689
+        3/1    1.19183
+        4/1    1.18586
+        5/1    1.17133
+        6/1    1.19429
+        7/1    1.17025
+        8/1    1.19894
+        9/1    1.16865
+       10/1    1.18490
+       11/1    1.16859
+       12/1    1.15237
+       13/1    1.16480
+       14/1    1.17239
+       15/1    1.17090
+       16/1    1.17793
+       17/1    1.18096
+       18/1    1.17402
+       19/1    1.15713
+       20/1    1.14644
+       21/1    1.17014
+       22/1    1.17405    1.17210 +/- 0.00196
+       23/1    1.18524    1.17648 +/- 0.00452
+       24/1    1.15430    1.17093 +/- 0.00640
+       25/1    1.14608    1.16596 +/- 0.00702
+       26/1    1.16945    1.16654 +/- 0.00576
+       27/1    1.18048    1.16853 +/- 0.00526
+       28/1    1.14595    1.16571 +/- 0.00536
+       29/1    1.14698    1.16363 +/- 0.00517
+       30/1    1.15260    1.16253 +/- 0.00475
+       31/1    1.17636    1.16378 +/- 0.00448
+       32/1    1.16260    1.16369 +/- 0.00409
+       33/1    1.16842    1.16405 +/- 0.00378
+       34/1    1.19111    1.16598 +/- 0.00400
+       35/1    1.15469    1.16523 +/- 0.00380
+       36/1    1.12755    1.16287 +/- 0.00426
+       37/1    1.18057    1.16392 +/- 0.00413
+       38/1    1.15577    1.16346 +/- 0.00392
+       39/1    1.18013    1.16434 +/- 0.00381
+       40/1    1.17888    1.16507 +/- 0.00369
+       41/1    1.17043    1.16532 +/- 0.00352
+       42/1    1.18062    1.16602 +/- 0.00343
+       43/1    1.19346    1.16721 +/- 0.00349
+       44/1    1.18678    1.16803 +/- 0.00344
+       45/1    1.18511    1.16871 +/- 0.00337
+       46/1    1.20630    1.17016 +/- 0.00354
+       47/1    1.15263    1.16951 +/- 0.00347
+       48/1    1.15520    1.16900 +/- 0.00338
+       49/1    1.16916    1.16900 +/- 0.00326
+       50/1    1.18526    1.16954 +/- 0.00320
+       51/1    1.18212    1.16995 +/- 0.00312
+       52/1    1.18985    1.17057 +/- 0.00308
+       53/1    1.22419    1.17220 +/- 0.00340
+       54/1    1.19003    1.17272 +/- 0.00334
+       55/1    1.20915    1.17376 +/- 0.00341
+       56/1    1.16981    1.17365 +/- 0.00331
+       57/1    1.14807    1.17296 +/- 0.00330
+       58/1    1.18700    1.17333 +/- 0.00323
+       59/1    1.17247    1.17331 +/- 0.00315
+       60/1    1.14801    1.17268 +/- 0.00313
+ Creating state point statepoint.60.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 3.0191e+00 seconds
+   Reading cross sections          = 2.8312e+00 seconds
+ Total time in simulation          = 5.2100e+01 seconds
+   Time in transport only          = 5.2064e+01 seconds
+   Time in inactive batches        = 1.7732e+01 seconds
+   Time in active batches          = 3.4368e+01 seconds
+   Time synchronizing fission bank = 2.3183e-02 seconds
+     Sampling source sites         = 2.0426e-02 seconds
+     SEND/RECV source sites        = 2.5648e-03 seconds
+   Time accumulating tallies       = 2.8914e-04 seconds
+   Time writing statepoints        = 3.4251e-03 seconds
+ Total time for finalization       = 7.6356e-05 seconds
+ Total time elapsed                = 5.5140e+01 seconds
+ Calculation Rate (inactive)       = 6767.39 particles/second
+ Calculation Rate (active)         = 6983.3 particles/second
+
+ ============================>     RESULTS     <============================
+
+ k-effective (Collision)     = 1.17053 +/- 0.00222
+ k-effective (Track-length)  = 1.17268 +/- 0.00313
+ k-effective (Absorption)    = 1.16926 +/- 0.00175
+ Combined k-effective        = 1.16971 +/- 0.00172
+ Leakage Fraction            = 0.00000 +/- 0.00000
+

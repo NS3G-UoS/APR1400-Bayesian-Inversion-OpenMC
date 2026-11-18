@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1361" material="1058" region="-936" universe="511"/>
+  <cell id="1362" material="1064" region="936 -937" universe="511"/>
+  <cell id="1363" material="1063" region="937 -938" universe="511"/>
+  <cell id="1364" material="1064" region="938" universe="511"/>
+  <cell id="1365" material="1059" region="-936" universe="512"/>
+  <cell id="1366" material="1064" region="936 -937" universe="512"/>
+  <cell id="1367" material="1063" region="937 -938" universe="512"/>
+  <cell id="1368" material="1064" region="938" universe="512"/>
+  <cell id="1369" material="1062" region="-936" universe="513"/>
+  <cell id="1370" material="1064" region="936 -937" universe="513"/>
+  <cell id="1371" material="1063" region="937 -938" universe="513"/>
+  <cell id="1372" material="1064" region="938" universe="513"/>
+  <cell id="1373" material="1064" region="-939" universe="514"/>
+  <cell id="1374" material="1063" region="939 -940" universe="514"/>
+  <cell id="1375" material="1064" region="940" universe="514"/>
+  <cell id="1376" fill="515" region="943 -944 945 -946 941 -942" universe="516"/>
+  <lattice id="515" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+512 512 511 511 511 511 511 511 511 511 511 511 511 511 512 512 
+512 511 511 513 511 511 511 511 511 511 511 511 513 511 511 512 
+511 511 511 512 512 511 511 511 511 511 511 512 512 511 511 511 
+511 513 512 514 514 512 511 511 511 511 512 514 514 512 513 511 
+511 511 512 514 514 512 513 511 511 513 512 514 514 512 511 511 
+511 511 511 512 512 511 511 511 511 511 511 512 512 511 511 511 
+511 511 511 511 513 511 511 512 512 511 511 513 511 511 511 511 
+511 511 511 511 511 511 512 514 514 512 511 511 511 511 511 511 
+511 511 511 511 511 511 512 514 514 512 511 511 511 511 511 511 
+511 511 511 511 513 511 511 512 512 511 511 513 511 511 511 511 
+511 511 511 512 512 511 511 511 511 511 511 512 512 511 511 511 
+511 511 512 514 514 512 513 511 511 513 512 514 514 512 511 511 
+511 513 512 514 514 512 511 511 511 511 512 514 514 512 513 511 
+511 511 511 512 512 511 511 511 511 511 511 512 512 511 511 511 
+512 511 511 513 511 511 511 511 511 511 511 511 513 511 511 512 
+512 512 511 511 511 511 511 511 511 511 511 511 511 511 512 512 </universes>
+  </lattice>
+  <surface id="936" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="937" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="938" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="939" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="940" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="941" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="942" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="943" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="944" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="945" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="946" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

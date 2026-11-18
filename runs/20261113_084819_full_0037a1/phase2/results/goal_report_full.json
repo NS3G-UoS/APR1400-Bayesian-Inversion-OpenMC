@@ -1,0 +1,22 @@
+{
+  "goal": "4D OpenMC criticality sweep -> heteroscedastic GP -> deterministic Bayesian posterior -> blind LOO inversion (no MCMC)",
+  "n_holdouts": 65,
+  "posterior_mean_mae": 0.05410575139454128,
+  "posterior_mean_relative_error": 0.08311314614955971,
+  "rediscovery_within_10pct": 0.676923076923077,
+  "rediscovery_within_20pct": 0.9384615384615385,
+  "coverage95": 0.9692307692307692,
+  "mean_width95": 0.25954206801670526,
+  "tight_width95_threshold": 0.2,
+  "tight_width95_fraction": 0.27692307692307694,
+  "direction_negative_fraction": 1.0,
+  "magnitude_median_abs_dk_dalpha": 0.0332961256203123,
+  "median_k_span_over_alpha_grid": 0.03351435829842,
+  "low_alpha_subset": {
+    "n": 26,
+    "bias_mean": 0.0053121348189662815,
+    "mae_mean": 0.045410284746053395,
+    "coverage95": 0.9230769230769231,
+    "note": "Descriptive only; small-bin estimate."
+  }
+}

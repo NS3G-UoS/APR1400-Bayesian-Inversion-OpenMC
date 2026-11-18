@@ -1,0 +1,16 @@
+models:
+  gpt: gpt-4.1
+  claude: claude-sonnet-5
+  gemini: gemma-4-26b-a4b-it
+  grok: gpt-5.6-terra
+komodo:
+  executable: physics_models/komodo/source/build/komodo
+  input_dir: physics_models/komodo/source/smpl/transient
+  processed_dir: data/processed
+  ground_truth_dir: data/ground_truth
+llm:
+  n_repeats: 1
+  temperature: 0.0
+  cache_dir: data/llm_cache
+report:
+  out_docx: results.docx

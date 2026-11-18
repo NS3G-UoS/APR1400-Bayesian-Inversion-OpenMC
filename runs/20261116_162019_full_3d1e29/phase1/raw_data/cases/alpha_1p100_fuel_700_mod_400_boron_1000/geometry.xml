@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1569" material="1149" region="-1079" universe="589"/>
+  <cell id="1570" material="1155" region="1079 -1080" universe="589"/>
+  <cell id="1571" material="1154" region="1080 -1081" universe="589"/>
+  <cell id="1572" material="1155" region="1081" universe="589"/>
+  <cell id="1573" material="1150" region="-1079" universe="590"/>
+  <cell id="1574" material="1155" region="1079 -1080" universe="590"/>
+  <cell id="1575" material="1154" region="1080 -1081" universe="590"/>
+  <cell id="1576" material="1155" region="1081" universe="590"/>
+  <cell id="1577" material="1153" region="-1079" universe="591"/>
+  <cell id="1578" material="1155" region="1079 -1080" universe="591"/>
+  <cell id="1579" material="1154" region="1080 -1081" universe="591"/>
+  <cell id="1580" material="1155" region="1081" universe="591"/>
+  <cell id="1581" material="1155" region="-1082" universe="592"/>
+  <cell id="1582" material="1154" region="1082 -1083" universe="592"/>
+  <cell id="1583" material="1155" region="1083" universe="592"/>
+  <cell id="1584" fill="593" region="1086 -1087 1088 -1089 1084 -1085" universe="594"/>
+  <lattice id="593" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+590 590 589 589 589 589 589 589 589 589 589 589 589 589 590 590 
+590 589 589 591 589 589 589 589 589 589 589 589 591 589 589 590 
+589 589 589 590 590 589 589 589 589 589 589 590 590 589 589 589 
+589 591 590 592 592 590 589 589 589 589 590 592 592 590 591 589 
+589 589 590 592 592 590 591 589 589 591 590 592 592 590 589 589 
+589 589 589 590 590 589 589 589 589 589 589 590 590 589 589 589 
+589 589 589 589 591 589 589 590 590 589 589 591 589 589 589 589 
+589 589 589 589 589 589 590 592 592 590 589 589 589 589 589 589 
+589 589 589 589 589 589 590 592 592 590 589 589 589 589 589 589 
+589 589 589 589 591 589 589 590 590 589 589 591 589 589 589 589 
+589 589 589 590 590 589 589 589 589 589 589 590 590 589 589 589 
+589 589 590 592 592 590 591 589 589 591 590 592 592 590 589 589 
+589 591 590 592 592 590 589 589 589 589 590 592 592 590 591 589 
+589 589 589 590 590 589 589 589 589 589 589 590 590 589 589 589 
+590 589 589 591 589 589 589 589 589 589 589 589 591 589 589 590 
+590 590 589 589 589 589 589 589 589 589 589 589 589 589 590 590 </universes>
+  </lattice>
+  <surface id="1079" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="1080" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="1081" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="1082" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="1083" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="1084" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="1085" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="1086" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1087" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="1088" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="1089" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

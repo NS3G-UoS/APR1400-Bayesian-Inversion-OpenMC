@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1249" material="1009" region="-859" universe="469"/>
+  <cell id="1250" material="1015" region="859 -860" universe="469"/>
+  <cell id="1251" material="1014" region="860 -861" universe="469"/>
+  <cell id="1252" material="1015" region="861" universe="469"/>
+  <cell id="1253" material="1010" region="-859" universe="470"/>
+  <cell id="1254" material="1015" region="859 -860" universe="470"/>
+  <cell id="1255" material="1014" region="860 -861" universe="470"/>
+  <cell id="1256" material="1015" region="861" universe="470"/>
+  <cell id="1257" material="1013" region="-859" universe="471"/>
+  <cell id="1258" material="1015" region="859 -860" universe="471"/>
+  <cell id="1259" material="1014" region="860 -861" universe="471"/>
+  <cell id="1260" material="1015" region="861" universe="471"/>
+  <cell id="1261" material="1015" region="-862" universe="472"/>
+  <cell id="1262" material="1014" region="862 -863" universe="472"/>
+  <cell id="1263" material="1015" region="863" universe="472"/>
+  <cell id="1264" fill="473" region="866 -867 868 -869 864 -865" universe="474"/>
+  <lattice id="473" name="apr1400_c2_16x16">
+    <pitch>1.285 1.285</pitch>
+    <dimension>16 16</dimension>
+    <lower_left>-10.28 -10.28</lower_left>
+    <universes>
+470 470 469 469 469 469 469 469 469 469 469 469 469 469 470 470 
+470 469 469 471 469 469 469 469 469 469 469 469 471 469 469 470 
+469 469 469 470 470 469 469 469 469 469 469 470 470 469 469 469 
+469 471 470 472 472 470 469 469 469 469 470 472 472 470 471 469 
+469 469 470 472 472 470 471 469 469 471 470 472 472 470 469 469 
+469 469 469 470 470 469 469 469 469 469 469 470 470 469 469 469 
+469 469 469 469 471 469 469 470 470 469 469 471 469 469 469 469 
+469 469 469 469 469 469 470 472 472 470 469 469 469 469 469 469 
+469 469 469 469 469 469 470 472 472 470 469 469 469 469 469 469 
+469 469 469 469 471 469 469 470 470 469 469 471 469 469 469 469 
+469 469 469 470 470 469 469 469 469 469 469 470 470 469 469 469 
+469 469 470 472 472 470 471 469 469 471 470 472 472 470 469 469 
+469 471 470 472 472 470 469 469 469 469 470 472 472 470 471 469 
+469 469 469 470 470 469 469 469 469 469 469 470 470 469 469 469 
+470 469 469 471 469 469 469 469 469 469 469 469 471 469 469 470 
+470 470 469 469 469 469 469 469 469 469 469 469 469 469 470 470 </universes>
+  </lattice>
+  <surface id="859" type="z-cylinder" coeffs="0.0 0.0 0.4095"/>
+  <surface id="860" type="z-cylinder" coeffs="0.0 0.0 0.4175"/>
+  <surface id="861" type="z-cylinder" coeffs="0.0 0.0 0.475"/>
+  <surface id="862" type="z-cylinder" coeffs="0.0 0.0 1.14495"/>
+  <surface id="863" type="z-cylinder" coeffs="0.0 0.0 1.24673"/>
+  <surface id="864" type="z-plane" boundary="reflective" coeffs="-0.5"/>
+  <surface id="865" type="z-plane" boundary="reflective" coeffs="0.5"/>
+  <surface id="866" type="x-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="867" type="x-plane" boundary="reflective" coeffs="10.28"/>
+  <surface id="868" type="y-plane" boundary="reflective" coeffs="-10.28"/>
+  <surface id="869" type="y-plane" boundary="reflective" coeffs="10.28"/>
+</geometry>

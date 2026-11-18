@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tallies>
+  <filter id="147" type="material">
+    <bins>978</bins>
+  </filter>
+  <filter id="148" type="material">
+    <bins>974 975 978</bins>
+  </filter>
+  <tally id="220" name="flux_tally">
+    <scores>flux</scores>
+  </tally>
+  <tally id="221" name="gd_fission_tally">
+    <filters>147</filters>
+    <scores>fission</scores>
+  </tally>
+  <tally id="222" name="total_fission_tally">
+    <filters>148</filters>
+    <scores>fission</scores>
+  </tally>
+</tallies>

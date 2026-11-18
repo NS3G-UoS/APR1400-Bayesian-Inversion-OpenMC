@@ -1,0 +1,20 @@
+[runner] using Sobol-based 4-feature design matrix with 4 cases (multidim mode)
+[runner] parallel workers=4, threads_per_case=1, total_cores=8
+[runner] using OPENMC_CROSS_SECTIONS=/home/dina/ArcLink/physics_models/openmc/data/mcnp_endfb71/cross_sections.xml with OMP_NUM_THREADS=1, OPENMC_NUM_THREADS=1
+[check] case 1 alpha=0.250 fuel=600K moderator=294K boron=0ppm seed=12346 Gd2O3 wt=0.02000 (expect 0.02000) rho_G=10.3010 rho_H=10.301 rho_L=10.301 O/M G=1.9852
+[check] case 2 alpha=0.583 fuel=900K moderator=294K boron=733ppm seed=12347 Gd2O3 wt=0.04667 (expect 0.04667) rho_G=10.3010 rho_H=10.301 rho_L=10.301 O/M G=1.9660
+[check] case 3 alpha=0.917 fuel=600K moderator=600K boron=1467ppm seed=12348 Gd2O3 wt=0.07334 (expect 0.07333) rho_G=10.3010 rho_H=10.301 rho_L=10.301 O/M G=1.9473
+[check] case 4 alpha=1.250 fuel=900K moderator=600K boron=2200ppm seed=12349 Gd2O3 wt=0.10000 (expect 0.10000) rho_G=10.3010 rho_H=10.301 rho_L=10.301 O/M G=1.9290
+[check] unique seeds verified: 4 distinct values across 4 cases
+[check] library temperatures: {'H': 'neutron data at 900 K present', 'L': 'neutron data at 900 K present', 'G': 'neutron data at 900 K present', 'clad': 'neutron data at 600 K present', 'water': 'neutron data at 600 K present', 'thermal': 'c_H_in_H2O at 600 K present'}
+WRITTEN FILES:
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/reports/map_validation.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/private_truth/private_truth_manifest.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/reports/material_checks.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/processed_data/openmc_dataset.csv
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/processed_data/blind_observations.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/private_truth/private_truth_manifest.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/metrics/dataset_registry.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/plots/keff_vs_alpha_gd.png
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/reports/result_summary.json
+- /home/dina/Downloads/apr1400 bayesian inverse code/runs/benchmark_workers_20261109_200651/w4/reports/phase1_summary_multidim.json
